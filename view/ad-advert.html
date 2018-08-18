@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- 视图窗口，移动端特属的标签。 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 忽略页面中的数字识别为电话号码,email识别 -->
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app"> 
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 下面三个： 禁止浏览器缓存，项目上线的时候，记得删除 -->
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>广告</title>
+    <script src="../js/changeSize.js"></script>
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+    <link rel="stylesheet" href="../css/layer.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/index.css" /> 
+                    <!-- 时间选择插件 -->
+    <link rel="stylesheet" href="../css/normalize3.0.2.min.css">
+    <link rel="stylesheet" href="../css/mobiscroll.css">
+    <link rel="stylesheet" href="../css/mobiscroll_date.css">
+</head>
+<body>
+    <div id="container">
+        <div id="ad-advert">
+            <div class="top clearfix">
+                <a href="#" class='fl' id='prevBtn'></a>
+                <nav class="fl">
+                    <ul class="clearfix" id="topBar">
+                        <li>
+                            <a href="#">
+                                <h3>首页</h3>
+                            </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                                店铺
+                              <h3>Lasuvier</h3>
+                          </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广告活动
+                                <h3>裤子</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广告组
+                                <h3 class="current">毛裤</h3>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- 右边三个点 -->
+                <p class="fr" id="chooseNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </p>
+            </div>
+             <hr />
+             <div class="con">
+                <!-- 效果分析 -->
+                <!-- Effect analysis  -->
+                <div class="et-analysis clearfix">
+                    <p class="fl analyse">
+                        <i></i>
+                        <a href="#">效果分析</a>
+                    </p>
+                    <div class="fl one-store"  >
+                        <i></i>
+                        <p class='fl'>裤子</p>
+                        <p class="fl status">已开启</p> 
+                    </div>
+                    <i class="fr" id="toggleBtn"></i>
+                </div>
+    
+                <!-- 下拉详情 -->
+                <div class="ad-detail" id='ad-detail'>
+                    <ul>
+                        <li class='state clearfix'>
+                            <h4 class="fl">状态：</h4>
+                            <div id='status' class="fl con clearfix">
+                                <p class='light fl'>
+                                    <span></span>
+                                    已启动
+                                </p>
+                                <p class='fl'>
+                                    <span></span>
+                                    已暂停
+                                </p>
+                                <p class='fl'>
+                                    <span></span>
+                                    已归档
+                                </p>
+                            </div>
+                        </li>
+                        <li class='clearfix'>
+                            <h4 class="fl">广告组：</h4>
+                            <div class="con fl">
+                                <input type="text" value='毛裤'>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <h4 class="fl">所属活动：</h4>
+                            <p class="fl con">裤子</p>
+                        </li>
+                        <li class="clearfix">
+                            <h4 class="fl">所属店铺：</h4>
+                            <p class="fl con">Lasuvier</p>
+                        </li>
+                        <li class="clearfix">
+                            <h4 class="fl">投放类型：</h4>
+                            <p class="fl con">手动</p>
+                        </li>
+                        <li class="clearfix give-price">
+                            <h4 class="fl">广告组出价：</h4>
+                            <div class="con fl">
+                                (分时折扣：200%)：
+                                <input type="text" value='$0.02'>
+                                <p>折扣出价：<span>$0.04</span></p>
+                            </div>
+                        </li>
+                        <li class='btn'>
+                            <button>取消</button>
+                            <button>确认</button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 4个选择项目 -->
+                <ul class="page-info clearfix">
+                    <li>
+                        <h3>广告</h3>
+                        <p>58.00</p>
+                    </li>
+                    <li>
+                        <h3>关键词</h3>
+                        <p>151</p>
+                    </li>
+                </ul>
+            </div>
+            <hr style='margin-top: 0;' />     
+            <!-- 两个a链接，进行页面的跳转 -->
+            <!-- two page link -->
+            <div class="tpLink clearfix">
+                <a href="#" class='now'>广告</a>
+                <a href="ad-keyword.html">关键词</a>
+            </div>
+              <!-- 店铺信息 -->
+              <div class="store-info">
+                <div class='tit' >
+                        <i ></i>
+                        <p   id="choose-day">今日</p>
+                    <!-- 查找店铺 -->
+                    <i id='find' ></i>
+                </div>
+                <!-- 具体内容 -->
+                <div class="con">
+                    <!-- 标题 -->
+                    <p id='tab'>
+                        <span class='light'>全部</span>
+                        <span>已启动</span>
+                        <span>已暂停</span>
+                        <span>已归档</span>
+                    </p>
+                    <!-- 表格 -->
+                     <div class='data clearfix' id='table-data'>
+                            <dl class="fl" id='store-data' >
+                        <dt> 广告</dt>
+                           <dd> 
+                            <a href="#">
+                                <i class='a'></i>
+                                <!-- 点击按钮，出现you详细信息 -->
+                                <span class='for-open'></span>
+                                <img src="../img/shit.png" alt="嘿嘿">                                
+                                <i class='a'></i>
+                            </a> 
+                            <!-- 向右出现每个dd的详细信息 -->
+                           <div class="dd-info" style="left: -375px;">
+                                <p>
+                                    LasuvierfitmeevierlinseryvierLa
+                                    vierelowinvier
+                                </p>
+                                <p>
+                                    ASIN: <span>FSTP13245</span>
+                                    SKU：<span>FSTP13245</span>
+                                </p>
+                                <!-- 右边的按钮 -->
+                                <sapn class="btn"></sapn>
+                            </div>
+                        </dd>
+                        <dd> 
+                            <a href="#">
+                                <i class='a'></i>
+                                <!-- 点击按钮，出现you详细信息 -->
+                                <span class='for-open'></span>
+                                <img src="../img/shit.png" alt="嘿嘿">                                
+                                <i class='a'></i>
+                            </a> 
+                            <!-- 向右出现每个dd的详细信息 -->
+                           <div class="dd-info" style="left: -375px;">
+                                <p>
+                                    LasuvierfitmeevierlinseryvierLa
+                                    vierelowinvier
+                                </p>
+                                <p>
+                                    ASIN: <span>FSTP13245</span>
+                                    SKU：<span>FSTP13245</span>
+                                </p>
+                                <!-- 右边的按钮 -->
+                                <sapn class="btn"></sapn>
+                            </div>
+                        </dd>
+                        <dd> 
+                         <a href="#">
+                             <i class='fen'></i>
+                             <img src="../img/shit.png" alt="嘿嘿">                                
+                             <i class='fen'></i>
+                         </a> 
+                     </dd>
+                     <dd> 
+                         <a href="#">
+                             <i></i>
+                             <img src="../img/shit.png" alt="嘿嘿">                             
+                             <i></i>
+                         </a>
+                     </dd>
+                    </dl>
+                    <p class='right-day' id='right-day'>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </p>
+                    <div class="fr" id='about-table'>
+                        <table>
+                            <thead>
+                                <th>
+                                    千次展 <br>
+                                    现花费
+                                </th>
+                                <th>
+                                    总成交 <br>
+                                    金额
+                                </th>
+                                <th>
+                                    点击 <br>
+                                    转化率
+                                </th>
+                                <th>
+                                    ACOS
+                                </th>
+                                <th>
+                                    直接成 <br>
+                                    交笔数
+                                </th>
+                                <th>
+                                    间接成<br>
+                                    交笔数
+                                </th>
+                                <th>
+                                    展现量
+                                </th>
+                                <th>
+                                    金额
+                                </th>
+                                <th>
+                                    转化率
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>$0.98</td>
+                                    <td>$0.98</td>
+                                    <td>45.90%</td>
+                                    <td>45.90%</td>
+                                    <td>12</td>
+                                    <td>8</td>
+                                    <td>1.232</td>
+                                    <td>$178.9</td>
+                                    <td>41.29%</td>
+                                </tr>
+                                <tr>
+                                    <td>$0.98</td>
+                                    <td>$0.98</td>
+                                    <td>45.90%</td>
+                                    <td>45.90%</td>
+                                    <td>12</td>
+                                    <td>8</td>
+                                    <td>1.232</td>
+                                    <td>$178.9</td>
+                                    <td>41.29%</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+             </div> 
+             </div>
+        </div>
+        <!-- 每个dt对应的弹出框 -->
+         <div id='own-info' class="own-info clearfix">
+            <ul class="fl">
+                <li>状态：</li>
+                <li>店铺名称：</li>
+                <li>所属：</li>
+                <li>日限额：</li>
+                <li>授权时间：</li>
+            </ul>
+            <div class="fl value">
+                <!-- 状态 -->
+                <div class="status" id='status'>
+                    <span>开启</span>
+                    <!-- 开关 -->
+                    <span ></span>
+                </div>
+                <!-- 店铺名称 -->
+                <div class="name" id="clean">
+                    <input type="text" value="  ABCDFEFGHIJKLMNOPQRST">
+                    <!-- <i ></i> -->
+                </div>
+                <!-- 所属 -->
+                <p>
+                    美国站
+                </p>
+                <!-- 日限额 -->
+                <p>
+                    无设置
+                </p>
+                <!-- 时间 -->
+                <p>2018-02-29  09：45：27</p>
+            </div>
+            <div class='operate'>
+                <a href="#">查看详情</a>
+                <span>确定</span>
+            </div>
+        </div>
+         <!-- 遮罩层 -->
+         <div id="mask"></div>
+         <!-- 右边的遮罩层 -->
+         <div id="mask1"></div>
+         <!-- 选择日期 -->
+         <div class="left-day" id="left-day"  >
+             <div>
+                 <h2>时间刷选</h2>
+                 <ul>
+                     <li class='one-date'>今日</li>
+                     <li>昨日</li>
+                     <li>到目前的周总结</li>
+                     <li>上周</li>
+                     <li>到目前的月总结</li>
+                     <li>上个月的总结</li>
+                     <li>自定义范围</li>
+                 </ul>
+                 <!-- 起始和结束 -->
+                 <div id="date" class='date clearfix'>
+                     <input type="text" id='start'  placeholder="起始">
+                     <input type="text" id='end' placeholder="结束">
+                 </div>
+             </div>
+             <!-- 重置和完成按钮 -->
+             <div id="date-btn" class="date-btn">
+                 <button>重置</button>
+                 <button>完成</button>
+             </div>
+         </div>
+ 
+         <!-- 选择要查看的店铺信息 -->
+         <div class="right-choose" id="right-choose"  >
+             <div>
+                 <h2>按住拖动调整顺序</h2>
+                 <ul>
+                     <li >展现量</li>
+                     <li>点击量</li>
+                     <li>花费</li>
+                     <li>点击率</li>
+                     <li>平均点击花费</li>
+                     <li>千次展现花费</li>
+                     <li>直接成交金额</li>
+                     <li>直接成交笔数</li>
+                     <li>ACOS</li>
+                     <li>总成交金额</li>
+                     <li>点击转化率</li>
+                 </ul>
+             </div>
+             <!-- 重置和完成按钮 -->
+             <div id="storeInfo-btn" class="date-btn">
+                 <button>重置</button>
+                 <button>完成</button>
+             </div>
+         </div>
+ 
+              <!-- 搜索页面 -->
+         <div id="store-search" style='display: none;' >
+                 <!-- 搜索栏 -->
+             <div class="search clearfix" id='search'>
+                 <i class="fl" id='return'></i> 
+                 <input type="text" class='fl' placeholder="请输入店铺名" />
+                 <span class="fl">取消</span>
+             </div>
+         </div>
+         
+        <!-- 遮罩层2 -->
+        <div id="mask2"></div>
+        <!-- 选择跳往某个页面 -->
+        <nav id="cpc-all-nav">
+            <ul>
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="./ad-active.html">
+                店铺：<span>Lasuvier</span>
+                </a></li>
+                <li><a href="./ad-group.html">
+                广告活动：<span>裤子</span>
+                </a></li>
+                <li><a href="#">
+                广告组：<span>毛裤</span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- 引入js文件 -->
+    <script src="../js/jquery.min.js"></script> 
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/layer.js"></script>
+    <!-- 时间选择插件 -->
+    <script src='../js/mobiscroll_date.js' charset="gb2312"></script>
+    <script src='../js/mobiscroll.js'></script>    
+    <script src="../js/common.js"></script> 
+
+    <script>
+           $(function () {
+            // 获取需要的元素
+            var $storeData = $('#store-data'),
+                $spans = $('.for-open',$storeData),
+                $dds = $('dd',$storeData),
+                $ddInfo = $('.dd-info',$storeData), // 详细信息，
+                $btn = $('.btn',$storeData),
+                // 取得详细信息的总宽度
+                infoWidth = $ddInfo.outerWidth(),
+                // 获取每个dd的宽度
+                ddWidth = $dds.outerWidth();
+                $ddInfo.css('left','-' + outerWidth + 'px');
+                $spans.click(function () {
+                   $ddInfo = $(this).parents("dd").find('.dd-info');
+                   if (!$ddInfo.is(':animated')) {
+                        $(this).css('display','none');
+                        $ddInfo.css('display','block')
+                            .animate({
+                                'left': ddWidth
+                            },'100');
+                        return false;
+                    }
+                });
+                // btn的点击事件
+                $btn.click(function () {
+                    $ddInfo.css('display','none')
+                    .animate({
+                        'left': '-' + outerWidth
+                    },'100');
+                    $spans.css('display','block');
+                    return false;
+                });
+        });
+    </script>
+
+    <script>
+                     // 信息查看切换功能
+          Common.tab('tab','span','light');
+
+        // 左弹窗功能
+        Common.sameLayerEffect('choose-day','left-day','ad-advert','mask','left');
+        Common.leftDay();
+        // 左边的时间选择功能
+        Common.timePlug('start');
+        Common.timePlug('end');
+
+        // 右弹窗功能
+        Common.sameLayerEffect('right-day','right-choose','ad-advert','mask1');
+        Common.rightDay();
+
+                // 搜索店铺功能
+        Common.storeSearch('find','ad-advert','store-search');
+        Common.showWrap('return','ad-advert','store-search');
+        // 跳转到广告页面
+        Common.clickLink('ad-advert','/view/about-keyword.html');
+        
+        // 返回上一个页面
+        Common.returnPrevPage();
+
+        Common.showOrHide('toggleBtn','ad-detail');
+        Common.changeStatus();
+
+        Common.sameNavStyle();
+        Common.chooseNav();
+    </script>
+</body>
+</html>

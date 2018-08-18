@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- 视图窗口，移动端特属的标签。 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 忽略页面中的数字识别为电话号码,email识别 -->
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app"> 
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 下面三个： 禁止浏览器缓存，项目上线的时候，记得删除 -->
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>新版cpc</title>
+    <script src="js/changeSize.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/layer.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />   
+    <!-- 时间选择插件 -->
+    <link rel="stylesheet" href="css/normalize3.0.2.min.css">
+    <link rel="stylesheet" href="css/mobiscroll.css">
+    <link rel="stylesheet" href="css/mobiscroll_date.css">
+</head>
+<body>
+    <div id='container'>
+        <div id="wrapper" >
+        <ul id='tab-con' >
+            <!-- 第一个li是cpc首页 -->
+            <li id='cpcIndex'>
+                <!-- swipper 插件实现左右无限滑动 -->
+                <nav class='swiper-container ct-nav'> 
+                    <ul class='swiper-wrapper clearfix'>
+                        <li  class='swiper-slide' data-id="2">
+                            <i class="icon-site2"></i>
+                            <p>加拿大站</p>
+                        </li>
+                        <li class='swiper-slide' data-id="3">
+                            <i class="icon-site3"></i>
+                            <p>墨西哥站</p>
+                        </li>
+                        <li  class='swiper-slide' data-id="9">
+                            <i  class="icon-site9"></i>
+                            <p>英国站</p>
+                        </li>
+                        <li  class='swiper-slide' data-id="1">
+                                <i class="icon-site1" ></i>
+                                <p>美国站</p>
+                            </li>
+                        <li class='swiper-slide' data-id="4">
+                            <i  class="icon-site4"></i>
+                            <p>德国站</p>
+                        </li>
+                        <li class='swiper-slide' data-id="6">
+                            <i  class="icon-site6"></i>
+                            <p>法国站</p>
+                        </li>
+                        <li class='swiper-slide' data-id="5">
+                            <i  class="icon-site5"></i>
+                            <p>西班牙站</p>
+                        </li>
+                        <li class='swiper-slide' data-id="8">
+                            <i  class="icon-site8"></i>
+                            <p>意大利站</p>
+                        </li>
+                    </ul>   
+                </nav>
+                <div class="content">
+                    <!-- 实时看板 -->
+                    <!-- real time info -->
+                    <div class="real-tminfo clearfix">
+                        <h2 class='fl'>实时看板</h2>
+                        <!-- 店铺选择 -->
+                        <div class="cs-store fr">
+                            <a href="view/search.html">
+                                Lasuvier
+                            </a>
+                        </div>
+                    </div>
+                    <!-- cpc-info -->
+                    <nav class="cpc-info" id='cpc-info'>
+                        <ul class='clearfix'>
+                            <li class='current'>
+                                <h4>账户余额</h4>
+                                <span>51,584,51</span>
+                            </li>
+                            <li>
+                                <h4>实时扣费</h4>
+                                <span>58.00</span>
+                            </li>
+                            <li>
+                                <h4>曝光量</h4>
+                                <span>241.51</span>
+                            </li>
+                            <li>
+                                <h4>点击量</h4>
+                                <span>115</span>
+                            </li>
+                                <li>
+                                <h4>账户余额</h4>
+                                <span>51,584,51</span>
+                            </li>
+                            <li>
+                                <h4>实时扣费</h4>
+                                <span>58.00</span>
+                            </li>
+                            <li>
+                                <h4>曝光量</h4>
+                                <span>241.51</span>
+                            </li>
+                            <li>
+                                <h4>点击量</h4>
+                                <span>115</span>
+                            </li>
+                            <li>
+                                <h4>点击量</h4>
+                                <span>115</span>
+                            </li>
+                                <li>
+                                <h4>账户余额</h4>
+                                <span>51,584,51</span>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- 图形信息 -->
+                    <div id="echart-info">
+                        <div class="top clearfix">
+                           <div class="fl to-day">
+                                <p>今日</p>
+                                <p>$111.22</p>
+                           </div>
+                           <div class="fr lt-day">
+                                <p>昨日</p>
+                                <p>$222.11</p>
+                           </div>
+                        </div>
+                        <!-- 图形展示区域 -->
+                        <div id="cpc-echart"></div>
+                    </div>
+                <!-- 横岗 -->
+                <hr />
+                    <!-- 店铺信息 -->
+                    <div class="store-info">
+                        <div class='tit' >
+                                <i ></i>
+                                <p   id="choose-day">今日</p>
+                            <!-- 查找店铺 -->
+                            <i id='find' ></i>
+                        </div>
+                        <!-- 具体内容 -->
+                        <div class="con">
+                            <!-- 标题 -->
+                            <p id='tab'>
+                                <span class='light'>全部</span>
+                                <span>已启动</span>
+                                <span>禁用</span>
+                            </p>
+                            <!-- 表格 -->
+                             <div class='data clearfix' id='table-data'>
+                                <dl class="fl" id='store-data' >
+                                    <dt> 店铺名称</dt>
+                                    <dd> 
+                                        <a href="#">Lasuvier</a> 
+                               
+                                    </dd>
+                                    <dd> <a href="#"> fitmee</a></dd>
+                                    <dd> <a href="#">linsery</a> </dd>
+                                    <dd> <a href="#">LaSuiveur</a> </dd>
+                                    <dd> <a href="#">Selowin</a> </dd>
+                                    <dd> <a href="#"> Viottis</a>	</dd>
+                                    <dd> <a href="#">PinkWind</a> </dd>
+                                    <dd> <a href="#">Lasuvier</a> </dd>
+                                    <dd> <a href="#"> fitmee</a></dd>
+                                    <dd> <a href="#">linsery</a> </dd>
+                                    <dd> <a href="#">LaSuiveurLaSuiveurLaSuiveur</a> </dd>
+                                    <dd> <a href="#">Selowin</a> </dd>
+                                    <dd> <a href="#"> Viottis</a>	</dd>
+                                    <dd> <a href="#">PinkWind</a> </dd>
+                                </dl>
+                                <p class='right-day' id='right-day'>
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </p>
+                                <div class="fr" id='about-table' >
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    千次展 <br>
+                                                    现花费
+                                                </th>
+                                                <th>
+                                                    总成交 <br>
+                                                    金额
+                                                </th>
+                                                <th>
+                                                    点击 <br>
+                                                    转化率
+                                                </th>
+                                                <th>
+                                                    ACOS
+                                                </th>
+                                                <th>
+                                                    直接成 <br>
+                                                    交笔数
+                                                </th>
+                                                <th>
+                                                    间接成<br>
+                                                    交笔数
+                                                </th>
+                                                <th>
+                                                    展现量
+                                                </th>
+                                                <th>
+                                                    金额
+                                                </th>
+                                                <th>
+                                                    转化率
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>$0.98</td>
+                                                <td>$0.98</td>
+                                                <td>45.90%</td>
+                                                <td>45.90%</td>
+                                                <td>12</td>
+                                                <td>8</td>
+                                                <td>1.232</td>
+                                                <td>$178.9</td>
+                                                <td>41.29%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>$0.98</td>
+                                                <td>$0.98</td>
+                                                <td>45.90%</td>
+                                                <td>45.90%</td>
+                                                <td>12</td>
+                                                <td>8</td>
+                                                <td>1.232</td>
+                                                <td>$178.9</td>
+                                                <td>41.29%</td>
+                                            </tr>
+                                            <tr>
+                                                    <td>$0.98</td>
+                                                    <td>$0.98</td>
+                                                    <td>45.90%</td>
+                                                    <td>45.90%</td>
+                                                    <td>12</td>
+                                                    <td>8</td>
+                                                    <td>1.232</td>
+                                                    <td>$178.9</td>
+                                                    <td>41.29%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>$0.98</td>
+                                                    <td>$0.98</td>
+                                                    <td>45.90%</td>
+                                                    <td>45.90%</td>
+                                                    <td>12</td>
+                                                    <td>8</td>
+                                                    <td>1.232</td>
+                                                    <td>$178.9</td>
+                                                    <td>41.29%</td>
+                                                </tr>
+                                                   <tr>
+                                                <td>$0.98</td>
+                                                <td>$0.98</td>
+                                                <td>45.90%</td>
+                                                <td>45.90%</td>
+                                                <td>12</td>
+                                                <td>8</td>
+                                                <td>1.232</td>
+                                                <td>$178.9</td>
+                                                <td>41.29%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>$0.98</td>
+                                                <td>$0.98</td>
+                                                <td>45.90%</td>
+                                                <td>45.90%</td>
+                                                <td>12</td>
+                                                <td>8</td>
+                                                <td>1.232</td>
+                                                <td>$178.9</td>
+                                                <td>41.29%</td>
+                                            </tr>
+                                               <tr>
+                                                <td>$0.98</td>
+                                                <td>$0.98</td>
+                                                <td>45.90%</td>
+                                                <td>45.90%</td>
+                                                <td>12</td>
+                                                <td>8</td>
+                                                <td>1.232</td>
+                                                <td>$178.9</td>
+                                                <td>41.29%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>$0.98</td>
+                                                <td>$0.98</td>
+                                                <td>45.90%</td>
+                                                <td>45.90%</td>
+                                                <td>12</td>
+                                                <td>8</td>
+                                                <td>1.232</td>
+                                                <td>$178.9</td>
+                                                <td>41.29%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- 广告效果 -->
+            <li id='ad-effect' style='display: none;'>
+                <div class='clearfix'>
+                    <a href="view/search.html" class='fr'>Lasuvier</a>               
+                    <i class='fr'></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li class='clearfix'><a href="view/rough-active.html">
+                            <img src="img/ad-act.png" class='fl' alt="广告图标" />
+                            <div class="fl ad-message">
+                                <h2>广告活动</h2>
+                                <p>
+                                    此店铺有
+                                    <span>13</span>
+                                    个广告活动
+                                </p>
+                            </div>
+                        </a></li>
+                        <li class='clearfix'><a href="view/rough-group.html">
+                            <img src="img/ad-group.png" class='fl' alt="广告图标" />
+                            <div class="ad-message fl">
+                                <h2>广告组</h2>
+                                <p>
+                                    此店铺有
+                                    <span>13</span>
+                                    个广告活动
+                                </p>
+                            </div>
+                        </a></li>
+                        <li class='clearfix'><a href="view/rough-ad.html">
+                            <img src="img/ad.png" class='fl' alt="广告图标" />
+                            <div class="ad-message fl">
+                                <h2>广告</h2>
+                                <p>
+                                    此店铺有
+                                    <span>13</span>
+                                    个广告活动
+                                </p>
+                            </div>
+                        </a></li>
+                        <li class='clearfix'><a href="view/rough-keyword.html">
+                            <img src="img/ad-keyword.png" class='fl' alt="广告图标" />
+                            <div class="fl ad-message">
+                                <h2>关键词</h2>
+                                <p>
+                                    此店铺有
+                                    <span>13</span>
+                                    个广告活动
+                                </p>
+                            </div>
+                        </a></li>
+                    </ul>
+                </nav>
+            </li>
+            <!-- 账户诊断 -->
+            <li id='act-diagnose' style='display: none;'>账户诊断</li>
+        
+        </ul>
+            <!-- 页面切换 -->
+            <ul id="tab-tit" class='clearfix'>
+                <li>
+                    <i></i>
+                    <p>
+                      <a href="index.html">首页</a> 
+                    </p>
+                </li>
+                <li>
+                    <i></i>
+                    <p>
+                        <a href="view/ad-effect.html">广告效果</a>
+                    </p>
+                </li>
+                <li>
+                    <i></i>
+                    <p>
+                        <a href="view/accountPage.html">账户监控</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+            <!-- 每个dt对应的弹出框 -->
+         <div id='own-info' class="own-info clearfix">
+            <ul class="fl">
+                <li>状态：</li>
+                <li>店铺名称：</li>
+                <li>所属：</li>
+                <li>日限额：</li>
+                <li>授权时间：</li>
+            </ul>
+            <div class="fl value">
+                <!-- 状态 -->
+                <div class="status" id='status'>
+                    <span>关闭</span>
+                    <!-- 开关 -->
+                    <span ></span>
+                </div>
+                <!-- 店铺名称 -->
+                <div class="name" id="clean">
+                    <input type="text" value="  ABCDFEFGHIJKLMNOPQRST">
+                    <!-- <i ></i> -->
+                </div>
+                <!-- 所属 -->
+                <p>
+                    美国站
+                </p>
+                <!-- 日限额 -->
+                <p>
+                    无设置
+                </p>
+                <!-- 时间 -->
+                <p>2018-02-29  09：45：27</p>
+            </div>
+            <div class='operate'>
+                <a href="#">查看详情</a>
+                <span>确定</span>
+            </div>
+        </div>
+        <!-- 遮罩层 -->
+        <div id="mask"></div>
+        <!-- 右边的遮罩层 -->
+        <div id="mask1"></div>
+        <!-- 选择日期 -->
+        <div class="left-day" id="left-day"  >
+            <div>
+                <h2>时间刷选</h2>
+                <ul>
+                    <li data-type="1" class='one-date'>今日</li>
+                    <li data-type="2">昨日</li>
+                    <li data-type="3">到目前的周总结</li>
+                    <li data-type="4">上周</li>
+                    <li data-type="5">到目前的月总结</li>
+                    <li data-type="6">上个月的总结</li>
+                    <li data-type="99">自定义范围</li>
+                </ul>
+                <!-- 起始和结束 -->
+                <div id="date" class='date clearfix'>
+                    <input type="text" id='start'  placeholder="起始">
+                    <input type="text" id='end' placeholder="结束">
+                </div>
+            </div>
+            <!-- 重置和完成按钮 -->
+            <div id="date-btn" class="date-btn">
+                <button>重置</button>
+                <button>完成</button>
+            </div>
+        </div>
+
+        <!-- 选择要查看的店铺信息 -->
+        <div class="right-choose" id="right-choose"  >
+            <div>
+                <h2>按住拖动调整顺序</h2>
+                <ul class="gridly">
+                    <li>展现量</li>
+                    <li>点击量</li>
+                    <li>花费</li>
+                    <li>点击率</li>
+                    <li>平均点击花费</li>
+                    <li>千次展现花费</li>
+                    <li>直接成交金额</li>
+                    <li>直接成交笔数</li>
+                    <li>ACOS</li>
+                    <li>总成交金额</li>
+                    <li>点击转化率</li>
+                </ul>
+            </div>
+            <!-- 重置和完成按钮 -->
+            <div id="storeInfo-btn" class="date-btn">
+                <button>重置</button>
+                <button>完成</button>
+            </div>
+        </div>
+
+        <!-- 搜索页面 -->
+        <div id="store-search" style='display: none;' >
+                <!-- 搜索栏 -->
+            <div class="search clearfix" id='search'>
+                <i class="fl" id='return'></i> 
+                <input type="text" class='fl' placeholder="请输入店铺名" />
+                <span class="fl">取消</span>
+            </div>
+        </div>
+    </div>
+            
+
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/swiper.min.js"></script>
+    <script src="js/layer.js"></script>
+    <!-- 鼠标拖拽插件 -->
+    <script src="js/jquery.gridly.js"></script>
+    <!-- 时间选择插件 -->
+    <script src='js/mobiscroll_date.js' charset="gb2312"></script>
+    <script src='js/mobiscroll.js'></script>    
+    <script src="js/common.js"></script>     
+    <script src="js/echarts.min.js"></script>
+
+    <script>
+        var cpcIndex = {
+            topSwiper: function () {
+                var swiper = new Swiper('.ct-nav', {
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                loop:true,
+                initialSlide: 3,
+                onSlideChangeEnd: function(swiper){
+                    var id = $(".ct-nav .swiper-slide-active").data("id");
+                    // console.log(id);
+                }
+              });
+            },
+
+            // 给id = cpc-info 下面的每个li添加一个点击事件
+            currentLi: function () {
+                var $cpcInfo = $('#cpc-info'),
+                    $lis = $('li',$cpcInfo);
+                // 使用jquery的事件委托
+                $cpcInfo.on('click','li',function () {
+                    if (!$(this).is('.current')) {
+                        $lis.removeClass('current');
+                        $(this).addClass('current');
+                    }
+                });
+            },
+   
+            // 选项卡切换效果
+            tabChange: function () {
+                // 获取需要的元素
+                var $tabTit = $('#tab-tit'),
+                    $tabCon = $('#tab-con');
+                    // 给 id=tabCon 添加点击事件
+                    $tabTit.on('click','li',function () {
+                        $tabTit.children().removeClass('tab');
+                        $(this).addClass('tab');
+                        $tabCon.children().eq($(this).index())
+                                .show().siblings().hide();
+                    });
+            },
+            // echart
+            cpcEchart: function () {
+                var myChart = echarts.init(document.getElementById('cpc-echart'));
+                var option = {
+                            xAxis: {
+                                type: 'category',
+                                boundaryGap: false,
+                                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                            },
+                            yAxis: {
+                                type: 'value'
+                            },
+                            series: [{
+                                data: [820, 932, 901, 934, 1290, 1330, 1320],
+                                type: 'line',
+                                areaStyle: {}
+                            }]
+                        };
+
+                myChart.setOption(option);
+            }
+        };
+    </script>
+    <script>
+        // 调用对象方法
+        cpcIndex.topSwiper();
+        cpcIndex.currentLi();
+        // 左弹出层操作
+        Common.sameLayerEffect('choose-day','left-day','wrapper','mask','left');
+        // 向右
+        Common.sameLayerEffect('right-day','right-choose','wrapper','mask1')
+        // Common.leftDay(function(){
+        //     var timeType = $(".one-date").data("type");
+        //     var start = end ='';
+        //     if(timeType == 99){
+        //         start = $("#start").val();
+        //         end  = $("#end").val();
+        //     }else{
+        //         start = end ='';
+        //     }
+            
+        //     console.log(timeType,start,end);
+        // });
+        Common.leftDay();
+        Common.rightDay();
+        // cpcIndex.tabChange();
+        // 点击搜索按钮
+        Common.storeSearch('find','wrapper','store-search');
+        // tab  
+        Common.tab('tab','span','light');
+        // showWrap
+        Common.showWrap('return','wrapper','store-search');
+        // 让页面的table网上移动
+        Common.letTableUp('container','echart-info');
+        // 时间插件
+        Common.timePlug('start');
+        Common.timePlug('end');    
+            // dd 弹出层，点击，切换状态
+        Common.tabOpen('status') ;
+        
+        // 弹出框里面的input
+        // Common.cleanInput();
+
+        // ddBtnLayer
+        Common.ddBtnLayer();
+
+        // 点击每个tr就跳转到新的页面
+        Common.clickLink('cpcIndex','view/ad-active.html');
+        // 调用echart
+        cpcIndex.cpcEchart();
+
+        // 鼠标拖拽效果
+        Common.gridly();
+    </script>
+</body>
+</html>

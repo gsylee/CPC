@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta content="telephone=no,email=no" name="format-detection">
+        <!-- //禁止自动识别电话号码和邮箱 -->
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <!-- //苹果手机：会删除默认的工具栏和菜单栏，网站开启对web app程序的支持 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <!-- //苹果手机：在web app应用下状态条（屏幕顶部条）的颜色,默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）。 -->
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <title>店铺搜索</title>
+        <script src="../js/changeSize.js"></script>
+        <link rel="stylesheet" href="../css/swiper.min.css" />
+        <link rel="stylesheet" href="../css/layer.css" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/index.css" /> 
+</head>
+<body>
+    <div id="spSearch">
+        <!-- 搜索栏 -->
+        <div class="search clearfix" id='search'>
+         <i class="fl" id='prevBtn' ></i> 
+          <input type="text" class='fl' placeholder="请输入店铺名" />
+          <span class="fl">取消</span>
+        </div>
+        <hr />
+        <!-- 选择 -->
+        
+       <div class="sp-choose">
+            <ul class='normal' id='normal'>
+                <li>United States</li>
+                <li>United Kingdom</li>
+                <li>Canada</li>
+                <li>Australia</li>
+                <li>Germany</li>
+                <li>France</li>
+            </ul>
+            <hr />
+            <ul class='slide' id='sidle'>
+               <li class='current'>A</li>
+               <li>B</li>
+               <li>C</li>
+               <li>D</li>
+               <li>E</li>
+               <li>F</li>
+               <li>G</li>
+               <li>H</li>
+               <li>I</li>
+               <li>J</li>
+               <li>K</li>
+               <li>L</li>
+               <li>M</li>
+               <li>N</li>
+               <li>O</li>
+               <li>P</li>
+               <li>Q</li>
+               <li>R</li>
+               <li>S</li>
+               <li>T</li>
+               <li>U</li>
+               <li>V</li>
+               <li>W</li>
+               <li>X</li>
+               <li>Y</li>
+               <li>Z</li>
+            </ul>
+            <!-- A_Z 店铺信息 -->
+            <dl>
+                <dt>A</dt>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+            </dl>
+            <dl>
+                <dt>B</dt>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+            </dl>
+            <dl>
+                <dt>C</dt>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+            </dl>
+            <dl>
+                <dt>D</dt>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+            </dl>
+            <dl>
+                <dt>A</dt>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+           </dl>
+           <dl>
+                <dt>A</dt>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+            </dl>
+            <dl>
+                <dt>A</dt>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+            </dl>
+            <dl>
+                <dt>A</dt>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+            </dl>
+            <dl>
+                <dt>A</dt>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+            </dl>
+            <dl>
+                <dt>A</dt>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+                <dd>Albania</dd>
+            </dl>
+       </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script> 
+    <script src="../js/common.js"></script>   
+    <script>
+        // 实现该页面的效果
+        var spSearch = {
+            chooseStore: function () {
+                // 功能1： 给id为normal的元素添加事件委托
+                var $normal = $('#normal'),
+                    $sidle = $('#sidle'),
+                    $lis = $('li',$sidle),
+                    prevOrder = 0,
+                    order , //用户保存用户点击的字母在同辈中的序号
+                    $dl = $('dl'),
+                    // 获取顶部固定蓝的高度
+                    $search = $('#search'),
+                    topHeight = $search.outerHeight(),
+                    // 获取 id=search的元素，和底下的按钮
+                    $input = $('input',$search),
+                    $span = $('span',$search);
+
+                    $sidle.on('click','li',function() {
+                         order = $(this).index();                                                    
+                        if (order != prevOrder && !$('html,body').is(':animated') ) {
+                            $lis.removeClass('current');
+                            $(this).addClass('current');
+                            $('html,body').animate({
+                            scrollTop: $dl.eq(order).offset().top - topHeight },800);
+                        } else {
+                            return false;
+                        }
+                        prevOrder = order;
+                    });
+                    // 给取消按钮，添加点击事件
+                    $span.click(function () {
+                        $input.val('');
+                    });
+            },
+            // 用户跳转到这个页面，就自动让元素获取焦点
+            getFocus: function () {
+                var $input = $('#search').find('input');
+                $input.focus();
+            }
+            
+        };
+        
+        spSearch.chooseStore();
+        Common.returnPrevPage();
+        spSearch.getFocus();
+    </script>
+</body>
+</html>

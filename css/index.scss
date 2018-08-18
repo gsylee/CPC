@@ -1,0 +1,2485 @@
+// 添加一个 px转为rem的函数
+@function px2rem($px) {
+    $rem: 25px;
+    @return ($px / $rem) + rem;
+}
+// 超出隐藏
+$hd: hidden;
+// block
+$bk: block;
+// left
+$fl: left;
+// center
+$ct: center;
+$sb: 1px solid #e8e8e8;
+// 字体加粗
+$bd: bold;
+
+// cpc首页样式开始
+#container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: $hd;
+}
+#wrapper {
+    overflow-x: $hd;
+    font-size: px2rem(13px);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+   // 3个导航链接
+   #tab-tit {
+    width: 100%;
+    background: #f9f9f9;
+    position: fixed;
+    left: 0;
+    z-index: 3;
+    bottom: 0;
+    font-size: px2rem(14px);
+    li {
+        width: 33.33%;
+        text-align: center;
+        float: $fl;
+        height: px2rem(60px);
+    }
+    i {
+       display: block;
+       width: px2rem(18px);
+       height: px2rem(18.5px);
+       margin: px2rem(8px) 0 px2rem(6px) px2rem(55px);
+    }
+    li:first-child i {
+        background: url(../img/cpcindex.png) no-repeat center;
+        background-size: contain;
+    }
+    li:nth-child(2) i {
+        background: url(../img/adpage.png) no-repeat center;
+        background-size: contain;
+    }
+    li:last-child i {
+        background: url(../img/actpage.png) no-repeat center;
+        background-size: contain;
+    }
+    // 添加高亮显示
+    li.tab {
+        color: #24b7ce;
+    }
+}
+#cpcIndex {
+     /* 头部滚动区域 */
+     .ct-nav {
+        text-align: $ct;
+        margin-top: 5px;
+        background: #fafafa;
+        li {
+            float:left;
+            margin: 0 px2rem(17.5px);
+            width:2.2rem;
+        }
+        i {
+            display: block;
+            width: px2rem(32px);
+            height: px2rem(32px);
+            padding: px2rem(3px);
+            border-radius: 50%;
+            margin:auto;
+            border: px2rem(.935px) solid #ccc;
+        }
+        p {
+            line-height: px2rem(26.5px);
+        }
+        // 按顺序8个li
+        li .icon-site1 {
+            background: url(../img/us2.png) no-repeat center;
+            background-size: px2rem(32px);   
+        }
+        li .icon-site2 {
+            background: url(../img/ca2.png) no-repeat center;
+            background-size: px2rem(32px);  
+        }
+        li .icon-site3 {
+            background: url(../img/mx2.png) no-repeat center;
+            background-size: px2rem(32px);  
+        }
+        li .icon-site9 {
+            background: url(../img/au2.png) no-repeat center;
+            background-size: px2rem(32px);  
+        } 
+        li .icon-site4 {
+            background: url(../img/de2.png) no-repeat center;
+            background-size: px2rem(32px);  
+        } 
+        li .icon-site6 {
+            background: url(../img/fr2.png) no-repeat center;
+            background-size: px2rem(32px);  
+        } 
+        li .icon-site5 {
+            background: url(../img/es2.png) no-repeat center;
+            background-size: px2rem(32px);  
+        } 
+        li .icon-site8{
+            background: url(../img/it2.png) no-repeat center;
+            background-size: px2rem(32px);  
+        }
+        li.swiper-slide-active .icon-site1 {
+            background: url(../img/us1.png) no-repeat center;
+            background-size: px2rem(32px);   
+        }
+        li.swiper-slide-active .icon-site2 {
+            background: url(../img/ca1.png) no-repeat center;
+            background-size: px2rem(32px);  
+        }
+        li.swiper-slide-active .icon-site3 {
+            background: url(../img/mx1.png) no-repeat center;
+            background-size: px2rem(32px);  
+        }
+        li.swiper-slide-active .icon-site9 {
+            background: url(../img/au1.png) no-repeat center;
+            background-size: px2rem(32px);  
+        } 
+        li.swiper-slide-active .icon-site4 {
+            background: url(../img/de1.png) no-repeat center;
+            background-size: px2rem(32px);  
+        } 
+        li.swiper-slide-active .icon-site6 {
+            background: url(../img/fr1.png) no-repeat center;
+            background-size: px2rem(32px);  
+        } 
+        li.swiper-slide-active .icon-site5 {
+            background: url(../img/es1.png) no-repeat center;
+            background-size: px2rem(32px);  
+        } 
+        li.swiper-slide-active .icon-site8{
+            background: url(../img/it1.png) no-repeat center;
+            background-size: px2rem(32px);  
+        }
+        li.swiper-slide-active{
+            color:#333;
+        }
+        li.swiper-slide-active i{
+            border: px2rem(1.88px) solid #24b7ce;
+        }
+    }
+
+    .real-tminfo {
+            /* 实时看板 */
+        line-height: px2rem(44px);
+        font-size: px2rem(18px);
+        border-bottom: $sb;
+        margin-left: px2rem(12px);
+        padding-right: px2rem(12px);
+        font-weight: $bd;
+        color: #333;
+       .cs-store {
+           position: relative;
+           margin-right: px2rem(16px);
+           a {
+               display: $bk;
+               color: #333;
+            }
+           &::after {
+                border-width: px2rem(7px) px2rem(4.5px);
+                border-color: #333 transparent transparent transparent;
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                position: absolute;
+                right: px2rem(-14px);
+                top: 50%;
+                margin-top: px2rem(-1px);
+           }
+       }
+    
+    }
+    .cpc-info {
+        /* cpc详情 */
+        text-align: $ct;
+        overflow-x: auto;
+        margin: 0 px2rem(8px) 0 px2rem(4px);
+        width: 100%;
+        ul {
+            width: px2rem(500px);
+        }
+        li {
+            float: left;
+            padding: px2rem(12px) 0;
+            border-bottom: $sb;
+            width: px2rem(100px);
+            position: relative;
+        }
+        li + li::before {
+            content: '';
+            height: px2rem(30.5px);
+            border-left: px2rem(1px) solid #e8e8e8;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: px2rem(-10px);
+        }
+        li:nth-child(6)::before {
+           border-color: #fff;
+        }
+        h4 {
+            margin-bottom: px2rem(4px);
+        }
+        span {
+            font-weight: $bd;
+            color: #333;
+            font-size: px2rem(18px);
+        }
+        /* 给当前被点击的li添加一个current类 */
+        li.current,li.current span {
+            color: #24b7ce;
+        }
+       
+    }
+
+     #echart-info {
+     /* 图形信息展示 */       
+        font-size: px2rem(13px);
+        color: #666;
+        .to-day, .lt-day {
+            width: px2rem(150px);
+            box-sizing: border-box;
+            p:first-child {
+                position: relative;
+                line-height: px2rem(25px);
+                text-indent: px2rem(15px);
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: px2rem(10px);
+                    height: px2rem(10px);
+                    border-radius: 50%;
+                    left: 0;
+                    top: px2rem(7px);
+                    background: #2062e6;
+                }
+            }
+            P:last-child {
+                color: #333;
+                font-size: px2rem(15px);
+                line-height: px2rem(30px);
+            }
+        }
+        .to-day {
+            padding-left: px2rem(80px);
+        }
+        .lt-day {
+            p:first-child::before {
+                background: #f2d024;
+            }
+        }
+        #cpc-echart {
+            margin: 0 auto;
+            width: px2rem(320px);
+            height: px2rem(240px);
+        }
+    }
+    .content hr {
+        height: px2rem(6px);
+        background: #eff0f4;
+        border: none;
+    }
+}
+
+.hdn {
+    overflow: $hd;
+}
+//店铺信息，相同样式
+// 4个rough页面的table信息
+#cpcIndex,#ad-active,
+#ad-group,
+#about-search,
+#ad-advert,
+#ad-keyword,
+#rough-active,
+#rough-group,
+#rough-ad,
+#rough-keyword
+{
+    .store-info {
+        /* 店铺信息 */
+         .tit {
+            height: px2rem(44px);
+            line-height: px2rem(44px);
+            position: relative;
+            margin-left: px2rem(12px);
+            border-bottom: $sb;
+            /* 日期选择按钮 */
+            p {
+                position: absolute;
+                left: px2rem(25px);
+                color: #333;
+                font-size: px2rem(16px);
+                font-weight: bold;
+            }
+            i:first-child {
+                position: absolute;
+                width: px2rem(18.5px);
+                height: px2rem(19.5px);
+                background: url(../img/kalendar.png) no-repeat center;
+                background-size: contain;
+                top: 50%;
+                margin-top: px2rem(-9.75px);
+            }
+            p::after {
+                border-width: px2rem(7px) px2rem(4.5px);
+                border-color: #999 transparent transparent transparent;
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                position: absolute;
+                right: px2rem(-14px);
+                top: 50%;
+                margin-top: px2rem(-2.5px);
+            }
+            i:last-child {
+                position: absolute;
+                width: px2rem(22.5px);
+                height: px2rem(21.5px);
+                background: url(../img/search.png) no-repeat center;
+                background-size: contain;
+                top: 50%;
+                margin-top: px2rem(-10.75px);            
+                right: px2rem(12px);
+            }
+        }
+        /* con */
+        // 标题
+        .con {
+             > p {
+                border: 1px solid #24b7ce;
+                font-size: 0;
+                text-align: $ct;
+                margin: px2rem(8px) auto;
+                border-radius: px2rem(4px);
+                box-sizing: border-box;                
+                width: 90%;
+               > span {
+                    display: inline-block;
+                    line-height: px2rem(28px);                
+                    font-size: px2rem(14px);
+                    width: 25%;
+                    box-sizing: border-box;
+                }
+                >span:not(:last-child) {
+                    border-right: 1px solid #24b7ce;
+                }
+               > span.light {
+                    background: #24b7ce;
+                    font-weight: $bd;
+                    color: #fff;
+                }
+            }        
+        }
+        // 首页表格
+        .data {
+            font-size: px2rem(14px);
+            position: relative;   
+            margin-bottom: px2rem(65px);
+            dl {
+                width: 24%;
+                text-align: left;    
+            }
+            dt {
+                text-indent: px2rem(20px);
+                color: #666;
+                line-height: px2rem(40px);
+                height: px2rem(40px);
+                font-weight: $bd;
+                background: #f7f8fb;
+            }
+            dd {
+                line-height: px2rem(48px);
+                height: px2rem(48px);
+                // border-bottom: $sb;
+                margin-left: px2rem(12px);
+                text-indent: px2rem(8px);
+                box-sizing: border-box;
+                position: relative;
+                box-shadow: inset 0px -1px 1px -1px #c8c7cc;
+                
+            }
+            dd a {
+                display: $bk;
+                font-size: px2rem(13px);
+                color: #69f;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap
+            }
+            dd:last-child {
+                text-align: left;
+            }
+            // 右边表格部分
+            .fr {
+                width: 68%;
+                overflow: auto;
+                margin-right: 8%;
+            }
+            // 三个点
+            .right-day {
+                position: absolute;
+                border: none;
+                margin-top: 0;
+                top: 0;
+                z-index: 10;
+                width: px2rem(30px);
+                box-sizing: border-box;
+                height: px2rem(40px);
+                right: 0;
+                i {
+                    display: inline-block;
+                    width: px2rem( 3px );
+                    font-size: 0;
+                    height: px2rem(3px);
+                    border-radius: 50%;
+                    margin-left: px2rem(2px);
+                    background: #333;
+                    margin-top: px2rem(17.5px);
+                }
+            }
+
+            table {
+                width: px2rem(666px);
+                text-align: $ct;
+                thead {
+                    background: #f7f8fb;
+                }
+                th {
+                    height: px2rem(40px);
+                    width: px2rem(74px);
+                    position: relative;
+                }
+                th::before,th::after {
+                    content: '';
+                    border: px2rem(4px) solid;
+                    position: absolute;
+                    border-color: transparent transparent #cececd  transparent;
+                    right: px2rem(3px);
+                }
+                th::before {
+                    top: px2rem(11px);
+                }
+                th::after {
+                  border-color:  #cececd  transparent transparent transparent;
+                  bottom: px2rem(11px);
+                }
+            }
+            // tbody
+            tbody tr {
+                line-height: px2rem(48px);
+                color: #333;
+                // border-bottom: $sb;
+                // position: relative;
+                box-shadow: inset 0px -1px 1px -1px #c8c7cc;
+                height: px2rem(48px);
+            }
+
+        }
+
+        // 给这个弹出层，添加一个左下方的三角形
+    }
+}
+
+// cpc 下table上面的3哥切换按钮
+#cpcIndex,#about-search {
+    .store-info {
+        .con {
+            >p {
+                width: 72.5%; 
+                > span {
+                    width: 33.33%;
+                }               
+            }
+        }
+    }
+}
+
+// 每个dd对应的弹出框
+#own-info,
+#ddfor-search {
+    width: 90%;
+    border-radius: px2rem(4px);
+    box-sizing: border-box;
+    padding-top: px2rem(16px);
+    padding-bottom: px2rem(16px);
+    position: fixed;
+    display: none;
+    left: 5%;
+    top: 20%;
+    z-index: 150;
+    background: #fff;
+}
+
+#own-info {
+
+    input {
+        height: px2rem(35px);
+        margin-top: px2rem(4px);
+        border: $sb;
+        border-radius: px2rem(4px);
+    }
+    .fl {
+        text-align: right;
+        color: #666;
+        font-size: px2rem(12px);
+        line-height: px2rem(44px);
+        width: 25%;
+    }
+    .value {
+        width: 75%;
+        box-sizing: border-box;
+        padding-right: px2rem(12px);
+        line-height: px2rem(44px);
+        color: #222;
+        text-align: left;
+        font-size: px2rem(14px);
+    }
+    .name,.day-limit
+     {  
+        position: relative;           
+        input {
+            line-height: inherit;
+            width: px2rem(230px);
+            font-size: px2rem(14px);
+            box-sizing: border-box;
+            padding-left: px2rem(5px);
+            &:focus {
+                outline: 1px solid #24b7ce;
+            }
+        }
+        i {
+            position: absolute;
+            width: px2rem(10px);
+            display: none;
+            height: px2rem(10px);
+            background: url(../img/clearn.png) no-repeat center;
+            background-size: contain;
+            right: px2rem(10px);
+            top: 50%;
+            margin-top: px2rem(-5px);
+        }
+    }
+    // 时间
+    .cs-time {
+        position: relative;
+        input {
+            height: px2rem(35px);
+            margin: px2rem(5px) 0;
+            width: 40%;
+            font-size: px2rem(14px);
+            box-sizing: border-box;
+            text-align: center;
+            border: $sb;
+            border-radius: px2rem(4px);
+        }
+    }
+    .cs-time::before {
+        position: absolute;
+        content: '';
+        left: 48.5%;
+        top: 54%;
+        width:3%;
+        height: 3%;
+        margin-top: (-1.5%);
+        background: #000;
+    }
+    // class 为status 下面的按钮
+    .status,
+    .bidding {
+        position: relative;
+        span:last-child {
+            width: px2rem(26px);
+            height: px2rem(24px);
+            position: absolute;
+            right: px2rem(25px);
+            top: 50%;
+            margin-top: px2rem(-13px);
+            // border-top-left-radius: 50%;
+            // border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border: $sb;
+        }
+        span:last-child::before,
+        span.open::after
+        {
+            position: absolute;
+            content: '';
+            width: px2rem(22px);
+            height: px2rem(22px);
+            top:0;
+            border: $sb;
+            border-radius: 50%;
+            background: #fff;
+        }
+        span:last-child::before {
+            left: px2rem(-11px);
+        }
+        // 当添加一个open类后
+        span.open {
+            background: #24b7ce;
+        }
+        span.open::before {
+            background: #24b7ce;
+            border-color: #24b7ce;
+        }
+        span:last-child.open::after {
+            right: 0;
+        }
+    }
+    // gp-price
+    .gp-price {
+        font-size: px2rem(12px);
+        text-align: left;    
+        p:first-child {
+            width: 55%;
+            text-align: left;    
+        }
+        .fr {
+            width: 43%;
+            text-align: left;
+            line-height: inherit;
+            &:focus {
+                outline: 1px solid #24b7ce;
+            }
+        }
+        p:last-child {
+            text-indent: 30%;
+        }
+    }
+    // 查看详情和确定
+    .operate {
+        line-height: px2rem(30px);
+        margin-left: px2rem(140px);
+        a {
+            display: inline;
+            text-decoration: underline;
+            font-size: px2rem(13px);
+            color: #69f;
+        }
+        span {
+            display: inline-block;
+            font-size: px2rem(14px);
+            width: px2rem(67px);
+            height: px2rem(30px);
+            text-align: center;
+            background: #24b7ce;
+            color: #fff;
+            border-radius: px2rem(4px);
+            margin-left: px2rem(5px);
+        }
+    }
+}
+// 广告管理页面：4个选择
+#ad-effect {
+    
+    /* 4个广告链接 */
+    > nav {
+        padding-left: px2rem(15px);
+        a {
+            display: $bk;
+            width: 100%;
+            height: 100%;
+        }
+        li {
+            width: 100%;
+            margin-right: px2rem(12px);
+            border-bottom: $sb;
+            height: px2rem(71px);
+            background: url(../img/icon-right.png) no-repeat 96%;
+            background-size: px2rem(8.5px) px2rem(20px);
+        }
+        img {
+            width: px2rem(45px);
+            height: px2rem(45px);
+            margin: px2rem(13px) px2rem(11px) 0 0 ;
+        }
+        .ad-message {
+            h2 {
+                font-size: px2rem(16px);
+                color: #333;
+                margin: px2rem(15px) 0 px2rem(8px) 0;
+            }
+            p {
+                font-size: px2rem(11px);
+            }
+            span {
+                font-size: px2rem(12px);
+                color: #69f;
+                font-weight: $bd;
+            }
+        }
+    }
+}
+
+//广告管理页面和账户监控页面，共同样式
+#ad-effect,
+#cpc-actControl {
+    /* 广告效果页面 */
+    > div {
+        line-height: px2rem(44px);
+        font-size: px2rem(16px);
+        border-bottom: $sb;
+        padding-right: px2rem(12px);
+        i {
+            width: px2rem(16.5px);
+            margin-top: px2rem(14.5px);
+            margin-right: px2rem(4px);
+            height: px2rem(15px);
+            background: url(../img/cpcstore.png) no-repeat;
+            background-size: contain;
+        }
+        a {
+            color: #333;
+            font-weight: $bd;
+            position: relative;
+            margin-right: px2rem(14px);
+            &::after {
+                border-width: px2rem(7px) px2rem(4.5px);
+                border-color: #333 transparent transparent transparent;
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                position: absolute;
+                right: px2rem(-14px);
+                top: 50%;
+                margin-top: px2rem(-2.5px);
+            }
+        }
+    }
+}
+
+// 遮罩层
+#mask,#mask1,#mask2 {
+    height: 100%;
+    position: fixed;
+    overflow-x: $hd;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: none;
+    z-index: -1;
+    background: rgba(125,125,125,.3);
+}
+#mask.mask,#mask1.mask,#mask2.mask {
+    display: block;
+    z-index: 50;
+}
+// 左右两个弹出层
+ #left-day,#right-choose {
+// 几个页面相同的样式，放在最外面
+     
+    /* 弹出框： 左边内容 */
+    position: fixed;
+    overflow: $hd;
+    z-index: 100;
+    top: 0;
+    width: px2rem(276px);
+    background: #fff;
+    height: 100%;
+
+    > div {
+        margin: px2rem(20px) px2rem(26px) 0 px2rem(12.5px);
+        color: #333;
+        font-size: px2rem(16px);
+        height: 80%;
+        overflow-y: auto;
+        h2 {
+            color: #c2c2c2;
+            font-weight: $bd;
+            font-size: px2rem(13px);
+            margin-bottom: px2rem(10px);
+        }
+        li {
+            position: relative;
+            overflow: $hd;
+            border-radius: px2rem(4px);
+            line-height: px2rem(43px);
+            height: px2rem(43px);
+            box-sizing: border-box;
+            padding-left: px2rem(12px);
+            background: #f5f5f5;
+            margin-bottom: px2rem(9px);
+            width: 100%;
+            &.one-date {
+                background:#e0f9fd ;
+                color: #24b7ce;
+            }
+            /* 每个li右下角的特殊样式 */
+            &.one-date::before {
+                content: '';
+                width: 0;
+                height: 0;
+                border: px2rem(15px) solid ;
+                border-color: transparent transparent transparent #24b7ce;
+                bottom: px2rem( -15px);
+                position: absolute;
+                z-index: 6;
+                right: px2rem(-15px);
+                transform: rotate(45deg);
+            }
+            &.one-date::after { 
+                content: '';
+                width: px2rem(10px);
+                height: px2rem(10px);
+                background: url(../img/tick.png) 0 0 no-repeat;
+                background-size:100%;
+                position: absolute;
+                right: px2rem(1px);
+                bottom: px2rem(1px);
+                z-index: 7;
+            }
+        }
+    }  
+     // 重置和完成按钮
+     .date-btn {
+        button {
+            position: absolute;
+            bottom: 0;
+            border: none;
+            outline: none;
+            width: 50%;
+            line-height: px2rem(44px);
+            text-align: $ct;
+            font-size: px2rem(16px);
+            background: #cac9c9;
+            font-weight: $bd;
+        }
+        button:first-child {
+            left: 0;
+        }
+        button:last-child {
+            right: 0;
+            background: #24b7ce;
+            color: #fff;
+        }
+    }   
+}
+// 时间选择独有的样式：
+#left-day {
+    //选中具体时间
+    left: px2rem(-276px);
+    .date {
+        position: relative;
+        input:first-child {
+            float: $fl;
+        }
+        input:last-child {
+            float: right;
+        }
+        input {
+            border: 1px solid #c2c2c2;
+            outline: none;
+            text-align: $ct;
+            font-size: px2rem(12px);
+            color: #999;
+            line-height: px2rem(34px);
+            width: px2rem(95px);
+            border-radius: px2rem(4px);
+        }
+            &::before {
+            content: '';
+            position: absolute;
+            left: 46%;
+            top: 50%;
+            margin-top: px2rem( 0.75px);
+            width: px2rem(18px);
+            height: px2rem(1.5px);
+            background: #333;
+        }
+    }
+}
+// 店铺展示独有的样式
+#right-choose {
+    .gridly {
+        position: relative;
+        overflow-x: hidden;
+    }
+    right: px2rem(-276px);
+    h2 {
+        text-indent: px2rem(5px);
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: px2rem(2px);
+            background: #24b7ce;
+        }
+    }
+}
+// 搜索店铺页面，不是跳转过来的
+#store-search {
+    /* 店铺搜索 */
+    overflow-x: $hd;
+    width: 100%;
+    font-size: px2rem(15px);
+    .search {
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: #fff;
+        height: px2rem(44px);
+        line-height: px2rem(44px);
+        font-size: px2rem(12px);
+        i {
+            width: px2rem(7px);
+            height: px2rem(17px);
+            margin-top: px2rem(13.5px);
+            background: url(../img/sh-left.png) no-repeat center;
+            background-size: contain;
+            margin-left: px2rem(12px);
+        }
+        input {
+            margin: px2rem(8px) px2rem(12px) 0 px2rem(12px);
+            height: px2rem(28px);
+            border: none;
+            outline: none;
+            width: 73%;
+            padding-left: 7%;
+            border-radius: px2rem(4px);
+            background: #eff0f4 url(../img/search1.png) no-repeat 3%;
+            background-size: px2rem(13.5px) px2rem(14px);
+        }
+        span {color: #333;}
+    }
+}
+// 显示了所有的店铺查询页面，跳转过来的
+#spSearch {
+    /* 店铺搜索 */
+    overflow-x: $hd;
+    width: 100%;
+    font-size: px2rem(15px);
+    .search {
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: #fff;
+        height: px2rem(44px);
+        line-height: px2rem(44px);
+        font-size: px2rem(12px);
+        i {
+            width: px2rem(7px);
+            height: px2rem(17px);
+            margin-top: px2rem(13.5px);
+            background: url(../img/sh-left.png) no-repeat center;
+            background-size: contain;
+            margin-left: px2rem(12px);
+        }
+        input {
+            margin: px2rem(8px) px2rem(12px) 0 px2rem(12px);
+            height: px2rem(28px);
+            border: none;
+            outline: none;
+            width: 73%;
+            padding-left: 7%;
+            border-radius: px2rem(4px);
+            background: #eff0f4 url(../img/search1.png) no-repeat 3%;
+            background-size: px2rem(13.5px) px2rem(14px);
+        }
+        span {color: #333;}
+    }
+    hr {
+        margin-top: px2rem(44px);
+        height: px2rem(6px);
+        background: #eff0f4;
+        border: none;
+    }
+    /* 选择商铺 */
+    .sp-choose {
+       
+        padding-right: px2rem(18px);
+        background: #f4f4f4;
+        .normal {
+            padding-top: px2rem(8px);
+            text-indent: px2rem(12px);
+            line-height: px2rem(35.5px);
+            color: #333;
+            background: #fff;
+            font-size: px2rem(15px);
+        }
+        .slide {
+            font-weight: $bd;
+            width: px2rem(18px);
+            font-size: px2rem(15px);
+            text-align: $ct;
+            position: fixed;
+            z-index: 5;
+            right: 0;
+            top: px2rem(105px);
+            line-height: px2rem(19px);
+            li.current {
+                color: #69f;
+            }
+        }
+        hr {
+            margin-top: 0;
+            height: px2rem(8px);
+        }
+        dl {
+            background: #fff;
+            text-indent: px2rem(12px);
+            position: relative;
+            padding-top: px2rem(44px);
+            padding-bottom: px2rem(8px);
+            font-size: px2rem(15px);
+            line-height: px2rem(35.5px);
+            color: #333;
+        }
+        dt {
+            width: px2rem(43px);
+            height: px2rem(30px);
+            line-height: px2rem(30px);
+            background: #24b7ce;
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+    }
+    
+    
+}
+
+// 几个 page  相同的头部导航部分样式
+/* 定位 */
+#about-ad,#at-keyword,
+#ad-advert,#about-keyword,#about-search,
+#ad-active,#ad-group,
+#ad-advert,#ad-keyword
+{
+     overflow-x: $hd;
+     .top {
+         position: fixed;
+         z-index: 5;
+         background: #fff;        
+         top: 0;
+         width: 100%;
+         border-bottom: $sb;
+        > a { 
+             height: px2rem(44px);            
+             width: px2rem(27px);
+             background: url(../img/sh-left.png) no-repeat center;
+             background-size: px2rem(7px) px2rem(17px);
+             border-right: $sb;
+         }
+         nav {
+             display: $bk;
+             text-indent: px2rem( 12px);
+             width: 80%;
+             overflow-x:auto;
+             a {
+                 display: $bk;
+             }
+             line-height: 1;
+             font-size: px2rem(9px);
+             li {
+                 float: left;
+                 height: px2rem(44px);
+                 padding: 0 px2rem(25px) 0 px2rem(10px);
+                 box-sizing: border-box;
+             }
+             li:not(:last-child) {
+                background: url(../img/to-right.png) no-repeat right;
+                background-size: px2rem(10px) px2rem(42px);
+             }
+             li:first-child {
+                 line-height: px2rem(44px);
+             }
+ 
+             li:not(:first-child ){
+                 padding-top: px2rem(10px);
+             }
+             li.last {
+                 line-height: px2rem(44px);
+                 padding-top: 0;
+             }
+             h3 {
+                 font-size: px2rem(13px);
+                 color: #666;
+             }
+             h3.current {
+                 color: #69f;
+             }
+         }
+         .fr {
+             width: px2rem(40px);
+             height: px2rem(44px);
+             box-sizing: border-box;
+             background: #fff;
+             padding: px2rem(20px) 0 0 px2rem(12px);
+             span {
+                 float: left;
+                 width: px2rem(3px);
+                 height: px2rem(3px);
+                 border-radius: 50%;
+                 background: #666;
+                 margin-right: px2rem(3px);
+             }
+         }
+     }
+     hr {
+         margin-top: px2rem(44px);
+         height: px2rem(8px);
+         background: #eff0f4;
+         border: none;
+     }
+       // con
+     .con a {
+        color: #69f;
+        text-decoration: underline;
+     }
+    .et-analysis {
+        /* 效果分析 */
+        line-height: px2rem(44px);
+        margin-left: px2rem(12px);
+        border-bottom: $sb;
+        font-size: px2rem(12px);
+        position: relative;
+        .analyse {
+            i {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: px2rem(-6.25px);
+                width: px2rem(12.5px);
+                height: px2rem(12.5px);
+                background: url(../img/aaa.png) no-repeat center;
+                // margin-top: px2rem(16px);
+                background-size: contain;
+            }
+        }
+        a {
+            margin-left: px2rem(18px);
+        }
+        .fr {
+            position: absolute;
+            right: px2rem(12px);
+            top: 50%;
+            margin-top: px2rem(-9.75px);
+            width: px2rem(19.5px);
+            height: px2rem(19.5px);
+            background: url(../img/set.png) no-repeat center;
+            background-size: contain;
+        }
+    }
+
+}
+
+#about-ad,#at-keyword,
+#ad-advert,#about-keyword,#about-search,
+#ad-active,#ad-group,
+#ad-advert,#ad-keyword,
+#cl-group
+{
+        // 广告详情
+        .ad-detail {
+            position: relative;
+            background: #f1f0f0;
+            width: 100%;
+            color: #666;
+            display: none;
+            padding-bottom: px2rem(10px);
+            li {
+                line-height: px2rem(36px);
+                font-size: px2rem(15px);
+            }
+            h4 {
+                font-size: px2rem(12px);
+                width: px2rem(90px);
+                text-align:right;
+            }
+            .con {
+                width: px2rem(270px);
+                color: #222;
+            }
+            .state {
+                p {
+                    margin-right: px2rem(20px);
+                    position: relative;
+                    text-indent: px2rem(22px);
+                }
+                span {
+                    position: absolute;
+                    width: px2rem(14px);
+                    left: 0;
+                    top: px2rem(10px);
+                    height: px2rem(14px);
+                    border-radius: 50%;
+                    border: 1px solid #666;
+                }
+                p.light {
+                    color: #24b7ce;
+                    span {
+                        background: #24b7ce url(../img/tick.png) no-repeat center;
+                        background-size: contain;
+                        border-color: #24b7ce;
+                    }
+                }
+            }
+            input {
+                text-indent: px2rem(5px);
+                color: inherit;
+                background: #fff;
+                height: px2rem(30px);
+                margin-top: px2rem(3px);
+                border-radius: px2rem(4px);
+                border: 1px solid #cdcbcb;
+            }
+            input:focus {
+                outline: 1px solid #24b7ce;
+            }
+            // 选择开始时间和结束时间
+            .cs-time {
+                position: relative;
+                input {
+                    width: px2rem(96px);
+                    text-align: $ct;
+                    text-indent: 0;
+                    border: 1px solid #ddd;
+                }
+                input:first-child {
+                    margin-right: px2rem(15px);
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: px2rem(5px);
+                    left: px2rem(196px);
+                    top: 50%;
+                    height: 1px;
+                    background: #333;
+                }
+            }
+            // 竞价
+            .price-status {
+              .con {
+                position: relative;
+                span:last-child {
+                    width: px2rem(26px);
+                    height: px2rem(24px);
+                    position: absolute;
+                    right: px2rem(25px);
+                    top: 50%;
+                    border: 1px solid #cdcbcb;
+                    margin-top: px2rem(-13px);
+                    // border-top-left-radius: 50%;
+                    // border-bottom-left-radius: 50%;
+                    border-top-right-radius: 50%;
+                    border-bottom-right-radius: 50%;
+                    border: $sb;
+                    background: #fff;
+                }
+                span:last-child::before,
+                span.open::after
+                {
+                    position: absolute;
+                    content: '';
+                    width: px2rem(22px);
+                    height: px2rem(22px);
+                    top:0;
+                    border: $sb;
+                    border-radius: 50%;
+                    background: #fff;
+                }
+                span:last-child::before {
+                    left: px2rem(-11px);
+                }
+                // 当添加一个open类后
+                span.open {
+                    background: #24b7ce;
+                }
+                span.open::before {
+                    background: #24b7ce;
+                    border-color: #24b7ce;
+                }
+                span:last-child.open::after {
+                    right: 0;
+                }
+              }
+            }
+            // 广告组出价
+            .give-price {
+                input {
+                    width: px2rem(100px);
+                }
+                p {
+                    text-indent: px2rem(65px);
+                    span {
+                        padding-left: px2rem(10px);
+                    }
+                }
+            }
+            // one-ad
+            .one-ad {
+               img {
+                   width: px2rem(68px);
+                   height: px2rem(68px);
+               }
+               .face-info {
+                   width: px2rem(185px);
+                   line-height: 1.4;
+                   p {
+                       font-size: px2rem(10px);
+                   }
+                   p:first-child {
+                       font-size: px2rem(14px);   
+                   }
+    
+               }
+            }
+    
+            // 取消和确认按钮
+            .btn {
+                padding-top: px2rem(10px);
+                button {
+                    width: px2rem(74px);
+                    height: px2rem(30px);
+                    line-height: px2rem(30px);
+                    text-align: $ct;
+                    border-radius: px2rem(4px);
+                    background: #cac9c9;
+                   outline: none;
+                   border: none;
+                }
+                button:first-child {
+                    margin-left: px2rem(180px);
+                    margin-right: px2rem(10px);
+                }
+                button:last-child {
+                    background: #24b7ce;
+                    color: #fff;
+                }
+            }
+        }
+    // 伪类添加一个三角形
+    .ad-detail.show::after {
+        content: '';
+        position: absolute;
+        border: px2rem(5px) solid;
+        border-color: transparent transparent #f1f0f0  transparent;
+        right: px2rem(18px);
+        top: px2rem(-10px);
+    }
+}
+
+// 广告页面
+/* 广告页面 */
+#about-ad,#about-search {
+    // 广告
+    .keyword {
+        font-size: px2rem(15px);
+        color: #222;
+        line-height: px2rem(21px);
+        padding-top: px2rem(15px);
+        padding-bottom: px2rem(5px);
+        p {
+            padding-left: px2rem(12px);
+            i {font-weight: $bd;}
+        }
+        .tip {
+            margin-left: px2rem(5px);
+            display: inline-block;
+            height: px2rem(20px);
+            background: #fb9e1b;
+            // padding-bottom: px2rem(4px) ;
+            color: #fff;
+            font-size: px2rem(9px);
+            border-radius: px2rem(1px);
+            span {
+                padding: 0 px2rem( 5px);                
+            }
+            span:first-child {
+                position: relative;
+            }
+        }
+        span:first-child::after {
+            content: '';
+            position: absolute;
+            right:px2rem(-2px);
+            height: 50%;
+            top: 25%;
+            border: px2rem(1px) solid #fff;
+        }
+        // p:last-child {
+        //     line-height: px2rem(35px);
+        //     text-align: $ct;
+        // }
+    }
+    // 涉及广告
+    .about-ad {
+        margin-top: px2rem(10px) ;
+        .tab {
+            width: px2rem(350px);
+            line-height: px2rem(30px);
+            border: 1px solid #24b7ce;
+            margin: 0 auto;
+            font-size: px2rem(14px);
+            border-radius: px2rem(4px);
+            text-align: $ct;
+            li {
+                float: $fl;
+                width: 25%;
+                box-sizing: border-box;
+            }
+            li.now {
+                background: #24b7ce;
+                color: #fff;
+            }
+            li:not(:last-child) {
+                border-right: 1px solid #24b7ce;
+            }
+        }   
+        h2 {
+            line-height: px2rem(36px);
+            font-size: px2rem(13px);
+            color: #333;
+            text-indent: px2rem(12px);
+            font-weight: $bd;
+            span {
+                color: #24b7ce;
+            }
+            border-bottom: $sb;
+        }
+        // 涉及的广告 列表
+        .ad-info {
+            margin-left: px2rem(12px);
+            li {
+                height: px2rem(95px);
+                border-bottom: $sb;
+                img {
+                    width: px2rem(57px);
+                    height: px2rem(57px);
+                    margin-top: px2rem(19px);
+                }
+                div {
+                   padding-top: px2rem(20px);
+                }
+                P {
+                    margin-left: px2rem(62px);
+                }
+                p:first-child {
+                    color: #69f;
+                    font-size: px2rem(13px);
+                    line-height: px2rem(16px);
+                    
+                }
+                p:not(:first-child) {
+                    color: #333;
+                    font-size: px2rem(10px);
+                    line-height: px2rem(11px);
+                }
+            }
+        }
+    }
+}
+#about-ad {
+    .keyword {
+            p:last-child {
+            line-height: px2rem(35px);
+            text-align: $ct;
+         }
+    }
+}
+// 关键词页面
+#about-keyword {
+    // 基本信息
+    .base-info {
+        padding: px2rem(12px);
+        position: relative;
+
+        img {
+            width: px2rem(71px);
+            height: px2rem(71px);
+            margin-right: px2rem(12px);
+        }
+        h3 {
+            color: #69f;
+            font-size: px2rem(14px);
+            line-height: px2rem(21px);
+        }
+        p {
+            line-height: px2rem(14.5px);
+            color: #333;
+            font-size: px2rem(10px);
+        }
+        .status {
+            position: absolute;
+            top:px2rem(8px);
+            left: px2rem(15px);
+            width: px2rem(50px);
+            height: px2rem(20px);
+            line-height: px2rem(20px);
+            background: #f29d1c;
+            color: #fff;
+            font-size: px2rem(10px);
+            text-align: center;
+        }
+    }
+
+    // 涉及关键词
+    .about-keyWord {
+        margin-top: px2rem(10px) ;
+        .tab {
+            width: px2rem(350px);
+            line-height: px2rem(30px);
+            border: 1px solid #24b7ce;
+            margin: 0 auto;
+            font-size: px2rem(14px);
+            border-radius: px2rem(4px);
+            text-align: $ct;
+            li {
+                float: $fl;
+                width: 25%;
+                box-sizing: border-box;
+            }
+            li.now {
+                background: #24b7ce;
+                color: #fff;
+            }
+            li:not(:last-child) {
+                border-right: 1px solid #24b7ce;
+            }
+        }   
+        h2 {
+            line-height: px2rem(36px);
+            font-size: px2rem(13px);
+            color: #333;
+            text-indent: px2rem(12px);
+            font-weight: $bd;
+            span {
+                color: #24b7ce;
+            }
+            border-bottom: $sb;
+        }
+        // 关键词详情
+        .kw-info {
+            padding-left: px2rem(12px);
+            li {
+                line-height: px2rem(48px);
+                border-bottom: $sb;
+                text-indent: px2rem(15px);
+            }
+            a {
+                color: #69f;
+                font-size: px2rem(14px);
+                display: $bk;
+            }
+            a:visited {
+               text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+
+// ad-   系列的共同样式
+#ad-active,
+#ad-group,
+#ad-advert,
+#ad-keyword ,
+#rough-active,
+#rough-group,
+#rough-ad,
+#rough-keyword
+{
+    // 店铺信息 
+    .store-info {
+        dd a {
+            text-indent: px2rem(15px);
+            position: relative;
+        }
+        dd i {
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            width: px2rem(12px);
+            height: px2rem(12px);
+        }
+        dd i:first-child {
+            top: px2rem(10px);
+            background-size: contain;
+        }
+        dd i:last-child {
+            bottom: px2rem(10px);
+            background-size: contain;
+        }
+        .fen {
+            background: url(../img/fen.png) no-repeat;
+        }
+        .m {
+            background: url(../img/M.png) no-repeat;
+        }
+        .a {
+            background: url(../img/A.png) no-repeat;
+        }
+    }
+}
+
+// 广告活动页面
+#ad-active,
+#ad-group,
+#ad-advert,
+#ad-keyword
+{
+    //具体店铺 
+     .one-store {
+        position: relative;
+        margin-left: px2rem(50px);
+        i {
+            position: absolute;
+            width: px2rem(16.5px);
+            height: px2rem(15px);
+            background: url(../img/cpcstore.png) no-repeat center;
+            background-size: contain;
+            left: 0;
+            top: 50%;
+            margin-top: px2rem(-7.5px);
+        }
+        p {
+            font-weight: $bd;
+            color: #333;
+            font-size: px2rem(16px);
+            margin-left: px2rem(22px);
+        }
+        p.status {
+            margin-left: px2rem(5px);
+            font-size: px2rem(9px);
+            line-height: px2rem(20px);
+            color: #fff;
+            background: #fb9e1b;
+            margin-top: px2rem(12px);
+            width: px2rem(45px);
+            height: px2rem(20px);
+            text-align: $ct;
+        }
+    }
+    // page-info
+    .page-info {
+        li {
+            float: left;
+            width: 25%;
+            text-align: $ct;
+            line-height: px2rem(80px);
+            height: px2rem(80px);
+            position: relative;
+        }
+        h3 {
+            margin-top: px2rem(25px);
+            font-size: px2rem(12px);
+            color: #333;
+            line-height:1;
+        }
+        p {
+            font-size: px2rem(18px);
+            line-height:px2rem(22px);
+        }
+        li:first-child p {
+            color: #fa8564;
+        }
+        li:nth-child(2) p {
+            color: #5faee3;
+        }
+        li:nth-child(3) p {
+            color: #1fbba6;
+        }
+        li:last-child p {
+            color: #333;
+        }
+        li + li::after {
+            position: absolute;
+            content: '';
+            height: px2rem(36px);
+            width: 1px;
+            background: #e8e8e8;
+            left: 0;
+            top: px2rem(22px);
+        }
+    }
+    //店铺信息
+    .store-info {
+        .con {
+            > p {
+                width: px2rem(350px);
+            }
+        }
+    }
+}
+// 广告组页面特有样式
+#ad-group {
+    .page-info {
+        li {
+            width: 33.33%;
+        }
+        li:first-child p {
+            color: #5faee3;
+        }
+        li:nth-child(2) p {
+            color: #1fbba6;            
+        }
+    }
+}
+// 广告页面特有样式
+#ad-advert,
+#ad-keyword
+{
+    .page-info {
+        li {
+            width: 50%;
+        }
+        li:first-child {
+            color: #1fbba6;            
+        }
+    }
+    // 新增的样式
+    .tpLink {
+        border-bottom: $sb;
+        a {
+            float: left;
+            width: 50%;
+            text-align: center;
+            color: #333;
+            font-size: px2rem(16px);
+            position: relative;
+        }
+        a.now {
+            color: #24b7ce;
+        }
+        a.now::before {
+            content: '';
+            position: absolute;
+            width: 20%;
+            height: 1px;
+            background: #24b7ce;
+            left: 38%;
+            bottom: 0;
+        }
+        line-height: px2rem(34px);
+
+    }
+}
+
+// 广告管理，四个页面，相同的样式
+#rough-active,
+#rough-group,
+#rough-ad,
+#rough-keyword
+{
+    // 头部导航栏
+    .top {
+        ul {
+            height: px2rem(44px);
+            line-height: px2rem(44px);
+            text-align: $ct;
+        }
+        li {
+            float: $fl;
+            &:first-child {
+                width: 10%;
+                height: inherit;
+                background: url(../img/sh-left.png) no-repeat center;
+                background-size: px2rem(7px) px2rem(17px);
+                box-sizing: border-box;
+                border-right: $sb;
+            }
+            &:not(:first-child) {
+                width: 22.5%;
+            }
+           
+        }
+        a {
+            position: relative;
+            color: #333;
+            font-size: px2rem(16px);
+        }
+        a.current {
+            color: #69f;
+        }
+        a.current::after {
+            position: absolute;
+            content: '';
+            width: px2rem(18px);
+            bottom: px2rem(-2px);
+            left: 50%;
+            margin-left: px2rem(-9px);
+            border-radius: 1px;
+            border: 1px solid #69f;
+        }
+    }
+    hr {
+        height: px2rem(8px);
+        background: #e8e8e8;
+        border: none;
+    }
+
+    // 店铺信息
+    //店铺信息
+    .store-info {
+        .con {
+            > p {
+                width: px2rem(350px);
+            }
+        }
+    }
+    
+}
+
+// rough-ad特有的样式
+#rough-ad,
+#ad-advert
+ {
+    .data {
+        dd {
+            img {
+                margin-left: px2rem(5px);
+                width: px2rem(28px);
+                height: px2rem(40px);
+                margin-top: px2rem(5px);
+            }
+           .for-open {
+                position: absolute;
+                width: px2rem(18px);
+                height: 100%;
+                right: 0;
+                top: 0;
+            }
+            .for-open::after {
+                position: absolute;
+                content: '';
+                border: px2rem(6px);
+                border-style: solid;
+                border-color: transparent transparent transparent #6699ff;
+                left: px2rem(6px);
+                top: px2rem(21px);
+            }
+        }
+        .dd-info {
+            width: px2rem(250px);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #fff;
+            z-index: 90;
+            height: px2rem(49px);
+            box-sizing: border-box;
+            padding-right: px2rem(20px);
+            text-indent: 0;
+            p:first-child {
+                color: #69f;
+                font-size: px2rem(13px);
+                line-height: px2rem(15px);
+            }
+            p:nth-child(2) {
+                color: #333;
+                line-height: px2rem(15px);
+                font-size: px2rem(10px);
+            }
+        }
+        .btn {
+            position: absolute;
+            width: px2rem(18px);
+            height: 100%;
+            right: 0;
+            top: 0;
+            background: rgba(221,232,252,.64);            
+        }
+        .btn::after {
+            position: absolute;
+            content: '';
+            border: px2rem(6px);
+            border-style: solid;
+            border-color: transparent #6699ff transparent transparent ;
+            top: px2rem(21px);
+        }
+
+    }
+}
+
+// 账户监控页面
+#cpc-actControl {
+    overflow-x: $hd;
+   ul  a {
+        display: $bk;
+        height: px2rem(90px);
+        margin-left: px2rem(15px);
+        border-bottom: $sb;
+        box-sizing: border-box;
+        background: url(../img/icon-right.png) no-repeat 98% ;
+        background-size: px2rem(8.5px) px2rem(20px);
+        > i {
+            margin-right: px2rem(11px);
+            width: px2rem(43px);
+            height: px2rem(43px);
+            margin-top: px2rem(21px);
+        }
+        > div {
+            width: px2rem(295px);
+        }
+    }
+    li:first-child  i {
+        background: url(../img/cl-flux1.png) no-repeat center;
+        background-size: contain;
+    }
+    li:nth-child(2)  i {
+        background: url(../img/cl-click2.png) no-repeat center;
+        background-size: contain;
+    }
+    li:nth-child(3)  i {
+        background: url(../img/cl-trend1.png) no-repeat center;
+        background-size: contain;
+    }
+    li:nth-child(4)  i {
+        background: url(../img/cl-data1.png) no-repeat center;
+        background-size: contain;
+    }
+    li:last-child  i {
+        background: url(../img/cl-count1.png) no-repeat center;
+        background-size: contain;
+    }
+    .tit {
+        margin-top: px2rem(20px);
+        height: px2rem(26px);
+        line-height: px2rem(26px);
+        h2 {
+            font-size: px2rem(16px);
+            color: #333;
+        }
+        p {
+            font-size: px2rem(11px);
+        }
+    }
+    span {
+        color: #f98e24;
+    }
+    h4 {
+        font-size: px2rem(11px);
+        line-height: px2rem(21px);
+    }
+}
+
+// 页面相同的搜索框
+#about-ad,#about-keyword,
+#cpc-flux,#cl-group
+{
+    // 搜索按钮
+    .search {
+        height: px2rem(40px);
+        margin-left: px2rem(12px);
+        border-bottom: $sb;
+        position: relative;
+        i {
+            position: absolute;
+            right: px2rem(12px);
+            width: px2rem(22.5px);
+            height: px2rem(21.5px);
+            top: 50%;
+            margin-top: px2rem(-10.75px);
+            background: url(../img/search.png) no-repeat center;
+            background-size: contain;
+        }
+    }
+}
+
+// cpc-flux  和 下一个页面的相同头部样式
+#cpc-flux,
+#cl-group
+{
+    overflow-x: $hd;
+    .top {
+        position: fixed;
+        z-index: 5;
+        background: #fff;        
+        top: 0;
+        width: 100%;
+        border-bottom: $sb;
+       > a { 
+            height: px2rem(44px);            
+            width: px2rem(27px);
+            background: url(../img/sh-left.png) no-repeat center;
+            background-size: px2rem(7px) px2rem(17px);
+            border-right: $sb;
+        }
+        nav {
+            display: $bk;
+            text-indent: px2rem( 12px);
+            width: 80%;
+            overflow-x:auto;
+            a {
+                display: $bk;
+            }
+            line-height: 1;
+            font-size: px2rem(9px);
+            li {
+                float: left;
+                height: px2rem(44px);
+                line-height: px2rem(44px);
+                padding: 0 px2rem(25px) 0 px2rem(10px);
+                box-sizing: border-box;
+            }
+            li:not(:last-child) {
+               background: url(../img/to-right.png) no-repeat right;
+               background-size: px2rem(10px) px2rem(42px);
+            }
+            li.other {
+                line-height: 1;
+                padding-top: px2rem(10px);
+            }
+            }
+            h3 {
+                font-size: px2rem(13px);
+                color: #666;
+            }
+            h3.current {
+                color: #69f;
+            }
+        }
+        .fr {
+            width: px2rem(40px);
+            height: px2rem(44px);
+            box-sizing: border-box;
+            background: #fff;
+            padding: px2rem(20px) 0 0 px2rem(12px);
+            span {
+                float: left;
+                width: px2rem(3px);
+                height: px2rem(3px);
+                border-radius: 50%;
+                background: #666;
+                margin-right: px2rem(3px);
+            }
+        }
+        hr {
+           margin-top: px2rem(44px);
+           height: px2rem(8px);
+           background: #eff0f4;
+           border: none;
+       }
+}
+
+#cpc-flux {
+    .search {
+        border-bottom: none;
+    }
+}
+
+// cl-group 
+#cl-group {
+    .et-analysis {
+        /* 效果分析 */
+        line-height: px2rem(44px);
+        margin-left: px2rem(12px);
+        border-bottom: $sb;
+        font-size: px2rem(12px);
+        position: relative;
+        .one-store {
+            position: relative;
+            margin-left: px2rem(100px);
+            i {
+                position: absolute;
+                width: px2rem(16.5px);
+                height: px2rem(15px);
+                background: url(../img/cpcstore.png) no-repeat center;
+                background-size: contain;
+                left: 0;
+                top: 50%;
+                margin-top: px2rem(-7.5px);
+            }
+            p {
+                font-weight: $bd;
+                color: #333;
+                font-size: px2rem(16px);
+                margin-left: px2rem(22px);
+            }
+            p.status {
+                margin-left: px2rem(5px);
+                font-size: px2rem(9px);
+                line-height: px2rem(20px);
+                color: #fff;
+                background: #fb9e1b;
+                margin-top: px2rem(12px);
+                width: px2rem(45px);
+                height: px2rem(20px);
+                text-align: $ct;
+            }
+        }
+        .fr {
+            position: absolute;
+            right: px2rem(12px);
+            top: 50%;
+            margin-top: px2rem(-9.75px);
+            width: px2rem(19.5px);
+            height: px2rem(19.5px);
+            background: url(../img/set.png) no-repeat center;
+            background-size: contain;
+        }
+    }
+    // 趋势图
+    /* 趋势图 */
+    .tend-chart {
+        > h2 {
+            text-indent: px2rem(12px);
+            font-size: px2rem(13px);
+            color: #333;
+            line-height: px2rem(40px);
+            span {
+                font-size: px2rem(11px);
+                span:last-child {
+                    color: #fe7575;
+                }
+            }
+        }
+        > p {
+            height: px2rem(35px);
+            position: relative;
+            width: 100%;
+            i {
+                position: absolute;
+                right: 8%;
+                width: px2rem(23px);
+                height: px2rem(23px);
+                top: 50%;
+                margin-top: px2rem(- 11px);
+                background: url(../img/icon-cpc-show.png) no-repeat ;
+                background-size: contain;
+                
+            }
+            margin-bottom: px2rem(15px);
+        }
+        #group-chart {
+            width: 95%;
+            height: px2rem(200px);
+            margin: 0 auto;
+            // background: blue;
+            overflow: $hd;
+            li {
+                float: left;
+                height: px2rem(200px);
+            }
+        }
+    }
+    .tit {
+        line-height: px2rem(40px);
+        font-size: px2rem(13px);
+        color: #333;
+        text-indent: px2rem(12px);
+        span {
+            color: #24b7ce;
+        }
+    }
+    // 页面提示功能
+    .tip {
+        position: fixed;
+        z-index: 250;
+        width: 80%;
+        left: 10%;
+        top: 30%;
+        .con {
+            line-height: px2rem(55px);
+            i {
+                width: px2rem(35px);
+                height: px2rem(55px);
+            }
+            i.fl {
+                background: url(../img/cpc-left-slip.png) no-repeat center;
+                background-size: contain;
+            }
+            p {
+                width: 75%;
+                text-align: $ct;
+                font-size: px2rem(17px);
+                color: #fff;
+            }
+            i.fr {
+                background: url(../img/cpc-right-slip.png) no-repeat center;
+                background-size: contain; 
+            }
+            padding-bottom: px2rem(75px);
+        }
+        span {
+            display: $bk;
+            width: px2rem(80px);
+            border: 1px solid ;
+            margin: 0 auto;
+            text-align: $ct;
+            color: #fff;
+            font-size: px2rem(14px);
+            line-height: px2rem(34px);
+            border-radius: px2rem(4px);
+            margin-bottom: px2rem(10px);
+        }
+    }
+}
+
+// 相同的表单样式
+#cpc-flux,
+#cl-group
+{
+    font-size: px2rem(13px);
+    .showData {
+        display: flex;
+        div {
+            box-sizing: border-box;
+        }
+        dt,thead {
+            height: px2rem(44px);                
+            line-height: px2rem(44px);
+            border-top: $sb;
+            border-bottom: $sb;
+        }
+        dd,tbody tr {
+            color: #333;
+            height: px2rem(56px);
+            line-height: px2rem(56px);
+            border-bottom: $sb;
+        }
+        .store-name {
+            width: 35%;
+            dt {
+                font-weight: $bd;
+                text-indent: px2rem(12px);
+                color: #333;
+            }
+            dd {
+                margin-left: px2rem(12px);
+                text-indent: px2rem(16px);
+                position: relative;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                i {
+                    width: px2rem(12px);
+                    height: px2rem(12px);
+                    position: absolute;
+                    left: 0;
+                }
+                i:first-child {
+                    top: px2rem(12px);
+                }
+                i:last-child {
+                    bottom: px2rem(12px);
+                }
+                i.a {
+                    background: url(../img/A.png) no-repeat;
+                    background-size: contain;
+                }
+                i.m {
+                    background: url(../img/M.png) no-repeat;
+                    background-size: contain;
+                }
+                i.f {
+                    background: url(../img/fen.png) no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+        .store-info {
+            width: 65%;
+            table {
+                width: 100%;
+            }
+            thead {
+                text-align: left;
+                th:first-child {
+                    width: 40%;
+                }
+                th:not(:first-child) {
+                    width: 30%;
+                }
+            }
+        }
+
+    }
+}
+
+
+// 导航栏选择 
+#cpc-all-nav {
+    display: none;
+    width: 100%;
+    
+    text-align: $ct;
+    ul {
+        width: 100%;
+        position: fixed;
+        z-index: 200;
+        bottom: 0;
+        left: 0;
+        border: $sb;
+        box-sizing: border-box;
+        border-radius: px2rem(4px);
+    }
+    li {
+        height: px2rem(40px);
+        line-height: px2rem(40px);
+        a {
+            background: #fff;
+            font-size: px2rem(15px);
+            color: #333;
+            display: $bk;
+        }
+    }
+    li:not(:last-child) {
+        border-bottom: $sb;
+    }
+}
+
+// 搜索词的弹出层
+#ddfor-search{
+    
+    li {
+        line-height: px2rem(35px);
+        height: px2rem(35px);
+        width: 100%;
+        h4 {
+            color: #666;
+            width: 25%;
+            text-align: right;
+            font-size: px2rem(12px);
+        }
+        > div {
+            width:74%;
+            text-align: left;
+            color: #222;
+            font-size: px2rem(15px);
+            position: relative;
+        }
+        h3 {
+            color: #333;
+            font-size: px2rem(14px);
+            font-weight: $bd;
+            text-indent: 5%;
+            position: relative;
+        }
+        h3::after {
+            position: absolute;
+            content: '';
+            width: px2rem(2px);
+            height: px2rem(14px);
+            top: 50%;
+            margin-top: px2rem(-7px);
+            left: 3%;
+            background: #24b7ce;
+        }
+    }
+    // 第一个li的特殊样式
+    li:first-child {
+        span:last-child {
+            position: absolute;
+            width: px2rem(26px);
+            height: px2rem(24px);
+            position: absolute;
+            right: px2rem(25px);
+            top: 50%;
+            margin-top: px2rem(-13px);
+            // border-top-left-radius: 50%;
+            // border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border: $sb;
+        }
+        span:last-child::before,
+        span.open::after
+        {
+            position: absolute;
+            content: '';
+            width: px2rem(22px);
+            height: px2rem(22px);
+            top:0;
+            border: $sb;
+            border-radius: 50%;
+            background: #fff;
+        }
+        span:last-child::before {
+            left: px2rem(-11px);
+        }
+        // 当添加一个open类后
+        span.open {
+            background: #24b7ce;
+        }
+        span.open::before {
+            background: #24b7ce;
+            border-color: #24b7ce;
+        }
+        span:last-child.open::after {
+            right: 0;
+        }
+    }
+    select {
+        line-height: inherit;
+        color: #333;
+        font-size: px2rem(15px);
+        border: none;
+        background: #f4eded;
+        margin-left: px2rem(32px);
+        padding: 0 px2rem(25px) 0 px2rem(10px);
+        outline: none;
+    }
+    li.select {
+        position: relative;
+        margin: px2rem(2px) 0;
+    }
+    li.select::after {
+        position: absolute;
+        content: '';
+        border-width: px2rem(4px) px2rem(3px);
+        border-style: solid;
+        border-color: #666 transparent transparent transparent;
+        left: 32.5%;
+        top: 55%;
+    }
+    // 两个搜索
+    .sh-choose {
+        span:last-child {
+            position: absolute;
+            width: px2rem(12px);
+            height: px2rem(12px);
+            border-radius: 50%;
+            right: 12%;
+            top: 50%;
+            margin-top: px2rem(-6px);
+            border: 1px solid #666;
+        }
+        span.click {
+            background: #24b7ce url(../img/tick.png) no-repeat center;
+            background-size: contain;
+        }
+    }
+    .operate {
+        padding-top: px2rem(10px);
+        padding-bottom: px2rem(5px);
+        font-size: px2rem(14px);
+        span {
+            width: px2rem(74px);
+            height: px2rem(30px);
+            line-height: px2rem(30px);
+            text-align: $ct;
+            border-radius: px2rem(4px);
+            background: #cac9c9;
+        }
+        span:first-child {
+            margin-left: px2rem(150px);
+            margin-right: px2rem(10px);
+        }
+        span:last-child {
+            background: #24b7ce;
+            color: #fff;
+        }
+    }
+}

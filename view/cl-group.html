@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <!-- 视图窗口，移动端特属的标签。 -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- 这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <!-- 忽略页面中的数字识别为电话号码,email识别 -->
+        <meta name="format-detection"content="telephone=no, email=no" />
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app"> 
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- 下面三个： 禁止浏览器缓存，项目上线的时候，记得删除 -->
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <title>账户监控-广告组</title>
+        <script src="../js/changeSize.js"></script>
+        <link rel="stylesheet" href="../css/swiper.min.css" />
+        <link rel="stylesheet" href="../css/layer.css" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/index.css" /> 
+                    <!-- 时间选择插件 -->
+        <link rel="stylesheet" href="../css/normalize3.0.2.min.css">
+        <link rel="stylesheet" href="../css/mobiscroll.css">
+        <link rel="stylesheet" href="../css/mobiscroll_date.css">
+</head>
+<body>
+    <div id="cl-group">
+        <!-- 头部导航栏 -->
+        <div class="top clearfix">
+            <a href="#" class='fl' id='prevBtn'></a>
+            <nav class="fl">
+                <ul class="clearfix" id='topBar'>
+                    <li>
+                        <a href="#">
+                            <h3>账户诊断</h3>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="#">
+                                
+                            <h3 >流量诊断</h3>
+                        </a>
+                    </li>
+                    <li class="other" >
+                        <a href="#">
+                                广告组
+                            <h3 class="current">sjabcd</h3>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 右边三个点 -->
+            <p class="fr" id="chooseNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+            
+        </div>
+        <hr />
+        <!-- 内容区域 -->
+        <div class="con">
+            <div class="et-analysis clearfix">
+                <div class="fl one-store clearfix">
+                    <i></i>
+                    <p class="fl">Lasuvier</p>
+                    <p class="fl status">已开启</p>
+                </div>
+                <i class="fr" id="toggleBtn"></i>
+            </div>
+                           <!-- 下拉详情 -->
+                <div class="ad-detail" id='ad-detail' >
+                    <ul>
+                        <li class='state clearfix'>
+                            <h4 class="fl">状态：</h4>
+                            <div id='status' class="fl con clearfix">
+                                <p class='light fl'>
+                                    <span></span>
+                                    已启用
+                                </p>
+                                <p class='fl'>
+                                    <span></span>
+                                    已暂停
+                                </p>
+                                <p class='fl'>
+                                    <span></span>
+                                    已禁用
+                                </p>
+                            </div>
+                        </li>
+                        <li class='clearfix'>
+                            <h4 class="fl">广告活动：</h4>
+                            <div class="con fl">
+                                <input type="text" value='裤子'>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <h4 class="fl">所属店铺：</h4>
+                            <div class="con fl">Lasuvier</div>
+                        </li>
+                        <li class='clearfix'>
+                            <h4 class="fl">日限额：</h4>
+                            <div class="con fl">
+                                <input type="text" value='$30'>
+                            </div>
+                        </li>
+                        <!-- 选择开始时间和结束时间 -->
+                        <li class="clearfix cs-time">
+                            <h4 class="fl">时间：</h4>
+                            <div class="con fl">
+                                <input type="text" placeholder="开始时间" id="group-start">
+                                <input type="text" placeholder="结束时间" id="group-end">
+                            </div>
+                        </li>
+                        <li class="clearfix price-status">
+                            <h4 class="fl">竞价+：</h4>
+                            <div class="fl con" id='price-status'>
+                                <span>关闭</span>
+                                <span ></span>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <h4 class="fl">分时折扣：</h4>
+                            <p class="con fl">
+                                90%
+                            </p>
+                        </li>
+                        <li class='btn'>
+                            <button>取消</button>
+                            <button>确认</button>
+                        </li>
+                    </ul>
+                </div>
+            <!-- 趋势图 -->
+            <!-- tendency chart -->
+            <div class="tend-chart">
+                <h2>
+                    点击量 趋势图
+                    <span>
+                        （昨日点击量环比同日平均下降<span>41%</span>）
+                    </span>
+                </h2>
+                <!-- 按钮，跳往和效果分析同样的页面 -->
+                <p>
+                    <a href="#">
+                        <!-- 跳转到和效果分析同一个页面 -->
+                        <i></i>
+                    </a>
+                </p>
+                <!-- 图表 -->
+                <div id="group-chart">
+                    <!-- 左右滑动功能 -->
+                    <ul class="swiper-wrapper clearfix">
+                        <li id="echart1" class="swiper-slide">1</li>
+                        <li id="echart2" class="swiper-slide">2</li>
+                        <li id="echart3" class="swiper-slide">3</li>
+                        <li id="echart4" class="swiper-slide">4</li>
+                    </ul>
+                </div>
+            </div>
+                        <!-- 搜索栏 -->
+            <hr style="margin-top: 0;">
+            <div class="search"  >
+                <i id="find"></i>
+            </div>
+            <!-- 表格 -->
+            <!--  -->
+            <p class="tit">
+                广告组广告<span> (424)</span>
+            </p>
+            <div id="showData" class="showData">
+                    <div class="store-name">
+                        <dl>
+                            <dt>店铺名称</dt>
+                            <dd>
+                                Gjdkfghkdf
+                                <i class="a"></i>
+                                <i class="m"></i>
+                            </dd>
+                            <dd>
+                                GjdkfghkdfGjdkfghkdf
+                                <i class="f"></i>
+                                <i class="f"></i>
+                            </dd>                        
+                        </dl>
+                    </div>
+                    <div class="store-info">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>过去同日平均</th>
+                                    <th>昨日</th>
+                                    <th>涨幅</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0.98</td>
+                                    <td>0.98</td>
+                                    <td>45.30%</td>
+                                </tr>
+                                <tr>
+                                    <td>0.98</td>
+                                    <td>0.98</td>
+                                    <td>45.30%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+        <div class="tip" id="tip">
+           <div class="con clearfix">
+               <i class="fl"></i>
+               <p class="fl">左右滑动可切换广告组</p>
+               <i class="fr"></i>
+           </div>
+            <span>我知道了</span>
+        </div>
+        <div id="mask1" ></div>
+        <div id="mask2"></div>
+        <nav id="cpc-all-nav">
+                <ul>
+                    <li><a href="/index.html">账户诊断</a></li>
+                    <li><a href="#">
+                       流量诊断
+                    </a></li>
+                    <li><a href="#">
+                            流量诊断
+                         </a></li>
+                </ul>
+            </nav>
+       </div>
+    </div>
+    <!-- 搜索页面 -->
+    <div id="store-search" style='display: none;' >
+            <!-- 搜索栏 -->
+        <div class="search clearfix" id='search'>
+            <i class="fl" id='return'></i> 
+            <input type="text" class='fl' placeholder="请输入店铺名" />
+            <span class="fl">取消</span>
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/mobiscroll_date.js"></script>
+    <script src="../js/mobiscroll.js"></script>
+    <script src="../js/common.js"></script>
+
+    <script>
+        // swiper 左右无线滑动功能
+        $(document).ready(function () {
+            var swiper = new Swiper('#group-chart',{
+                slidesPerView: 1,
+                spaceBetween: 30
+            });
+        });
+
+        // echart功能
+        $(document).ready(function () {
+              // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echart1'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                color: ['#497fea'],
+                grid: {
+                    bottom: '20%',
+                    left: '10%',
+                    top: '5%'
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['0', '6', '12', '18', '22'],
+                    axisTick: {
+                        show: false,
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#999'
+                        }
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: '#999'
+                        }
+                    }
+                },
+                series: [{
+                    data: [3, 1, 5,11],
+                    type: 'line'
+                }]
+            };
+
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        });
+        $(document).ready(function () {
+              // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echart2'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: 'ECharts 入门示例'
+                },
+                tooltip: {},
+                legend: {
+                    data:['销量']
+                },
+                xAxis: {
+                    data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                },
+                yAxis: {},
+                series: [{
+                    name: '销量',
+                    type: 'bar',
+                    data: [5, 20, 36, 10, 10, 20]
+                }]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        });
+        $(document).ready(function () {
+              // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echart3'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: 'ECharts 入门示例'
+                },
+                tooltip: {},
+                legend: {
+                    data:['销量']
+                },
+                xAxis: {
+                    data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                },
+                yAxis: {},
+                series: [{
+                    name: '销量',
+                    type: 'bar',
+                    data: [5, 20, 36, 10, 10, 20]
+                }]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        });
+        $(document).ready(function () {
+              // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echart4'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: 'ECharts 入门示例'
+                },
+                tooltip: {},
+                legend: {
+                    data:['销量']
+                },
+                xAxis: {
+                    data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                },
+                yAxis: {},
+                series: [{
+                    name: '销量',
+                    type: 'bar',
+                    data: [5, 20, 36, 10, 10, 20]
+                }]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        });
+
+        $(document).ready(function () {
+            // 显示提示框的功能
+            // 获取需要的元素
+            var $tip = $('#tip'),
+                $mask = $('#mask1').off('click');
+                $span = $('span',$tip);
+                $mask.addClass('mask')
+                     .css('background',"rgba(0,0,0,.5)");
+                $span.click(function () {
+                    $mask.removeClass('mask');
+                    $tip.css('display','none');
+                });
+        });
+
+        Common.chooseNav('cl-group');
+        // 查询店铺功能
+        Common.storeSearch('find','cl-group','store-search');
+        Common.showWrap('return','cl-group','store-search');
+        Common.returnPrevPage();
+
+        // 点击设置按钮，出现的下拉详情信息
+        Common.showOrHide('toggleBtn','ad-detail');
+        Common.changeStatus();
+        Common.timePlug('group-start');
+        Common.timePlug('group-end');
+        Common.tabOpen('price-status');
+    </script>
+</body>
+</html>

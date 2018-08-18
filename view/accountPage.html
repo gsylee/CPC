@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <!-- 视图窗口，移动端特属的标签。 -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- 这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <!-- 忽略页面中的数字识别为电话号码,email识别 -->
+        <meta name="format-detection"content="telephone=no, email=no" />
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app"> 
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- 下面三个： 禁止浏览器缓存，项目上线的时候，记得删除 -->
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <title>账户监控</title>
+        <script src="../js/changeSize.js"></script>
+        <link rel="stylesheet" href="../css/swiper.min.css" />
+        <link rel="stylesheet" href="../css/layer.css" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/index.css" /> 
+                    <!-- 时间选择插件 -->
+        <link rel="stylesheet" href="../css/normalize3.0.2.min.css">
+        <link rel="stylesheet" href="../css/mobiscroll.css">
+        <link rel="stylesheet" href="../css/mobiscroll_date.css">
+</head>
+<body>
+    <div id="cpc-actControl">
+        <div class='clearfix'>
+            <a href="search.html" class='fr'>Lasuvier</a>               
+            <i class='fr'></i>
+        </div>
+        <nav>
+            <ul>
+                <!-- 流量 -->
+                <li><a href="./flux.html" class="clearfix">
+                  <i class="fl"></i>
+                  <div class="fl">
+                      <div class="tit clearfix">
+                          <h2 class="fl">产品流量突降</h2>
+                          <p class="fl">
+                              (低于或高于<span>40%</span>预警)
+                          </p>
+                      </div>
+                      <h4>
+                          您有<span>55</span>个产品的转化率下降，查看是否有出价有问题！
+                      </h4>
+                  </div>
+                </a></li>
+                <!-- 点击 -->
+                <li><a href="#" class="clearfix">
+                  <i class="fl"></i>
+                  <div class="fl">
+                      <div class="tit clearfix">
+                          <h2 class="fl">产品点击突降</h2>
+                          <p class="fl">
+                              (低于或高于<span>40%</span>预警)
+                          </p>
+                      </div>
+                      <h4>
+                          您有<span>55</span>个产品的转化率下降，查看是否有出价有问题！
+                      </h4>
+                  </div>
+                </a></li>
+                <!-- 下降 -->
+                <li><a href="#" class="clearfix">
+                    <i class="fl"></i>
+                  <div class="fl">
+                      <div class="tit clearfix">
+                          <h2 class="fl">产品转化下降</h2>
+                          <p class="fl">
+                              (低于或高于<span>40%</span>预警)
+                          </p>
+                      </div>
+                      <h4>
+                          您有<span>55</span>个产品的转化率下降，查看是否有出价有问题！
+                      </h4>
+                  </div>
+                </a></li>
+                <!-- 扩流 -->
+                <li><a href="#" class="clearfix">
+                    <i class="fl"></i>
+                  <div class="fl">
+                      <div class="tit clearfix">
+                          <h2 class="fl">好产品可扩流</h2>
+                          <p class="fl">
+                              (低于或高于<span>40%</span>预警)
+                          </p>
+                      </div>
+                      <h4>
+                          您有<span>55</span>个产品的转化率下降，查看是否有出价有问题！
+                      </h4>
+                  </div>
+                </a></li>
+                <!-- 点击率 -->
+                <li><a href="#" class="clearfix">
+                    <i class="fl"></i>
+                  <div class="fl">
+                      <div class="tit clearfix">
+                          <h2 class="fl">产品点击率下降</h2>
+                          <p class="fl">
+                              (低于或高于<span>40%</span>预警)
+                          </p>
+                      </div>
+                      <h4>
+                          您有<span>55</span>个产品的转化率下降，查看是否有出价有问题！
+                      </h4>
+                  </div>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+        <!-- 引入js文件 -->
+    <script src="../js/jquery.min.js"></script> 
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/layer.js"></script>
+    <!-- 时间选择插件 -->
+    <script src='../js/mobiscroll_date.js' charset="gb2312"></script>
+    <script src='../js/mobiscroll.js'></script>    
+    <script src="../js/common.js"></script> 
+</body>
+</html>

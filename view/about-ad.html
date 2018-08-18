@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta content="telephone=no,email=no" name="format-detection">
+        <!-- //禁止自动识别电话号码和邮箱 -->
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <!-- //苹果手机：会删除默认的工具栏和菜单栏，网站开启对web app程序的支持 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <!-- //苹果手机：在web app应用下状态条（屏幕顶部条）的颜色,默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）。 -->
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <title>涉及广告</title>
+        <script src="../js/changeSize.js"></script>
+        <link rel="stylesheet" href="../css/swiper.min.css" />
+        <link rel="stylesheet" href="../css/layer.css" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/index.css" /> 
+</head>
+<body>
+    <div id="about-ad">
+     <div class="top clearfix">
+            <a href="#" class='fl' id='prevBtn'></a>
+            <nav class="fl ">
+                <ul class='clearfix' id='topBar'>
+                    <li>
+                        <a href="#">
+                            <h3>首页</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            店铺
+                            <h3>Lasuvier</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            广告活动
+                            <h3>裤子</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            广告组
+                            <h3>裤子</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            关键词
+                            <h3 class='current'>swimming</h3>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 右边三个点 -->
+            <p class="fr" id="chooseNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+        </div>
+        <hr />
+        <div class="con">
+            <!-- 效果分析 -->
+            <!-- Effect analysis  -->
+            <div class="et-analysis clearfix">
+                <p class="fl analyse">
+                    <i></i>
+                    <a href="#">效果分析</a>
+                </p>
+                <i class="fr" id="toggleBtn"></i>
+            </div>
+            <!-- 下拉详情 -->
+           <div class="ad-detail" id='ad-detail'>
+                    <ul>
+                        <li class='state clearfix'>
+                            <h4 class="fl">状态：</h4>
+                            <div id='status' class="fl con clearfix">
+                                <p class='light fl'>
+                                    <span></span>
+                                    已启动
+                                </p>
+                                <p class='fl'>
+                                    <span></span>
+                                    已暂停
+                                </p>
+                                <p class='fl'>
+                                    <span></span>
+                                    已归档
+                                </p>
+                            </div>
+                        </li>
+                        <li class='clearfix'>
+                            <h4 class="fl">所属广告组：</h4>
+                            <p class="fl con">FSTP89376 FBA</p>
+                        </li>
+                        <li class="clearfix">
+                            <h4 class="fl">所属活动：</h4>
+                            <p class="fl con">FSTP89376 FBA</p>
+                        </li>
+                        <li class="clearfix">
+                            <h4 class="fl">所属店铺：</h4>
+                            <p class="fl con">Lasuvier</p>
+                        </li>
+                        <li class="clearfix">
+                            <h4 class="fl">投放类型：</h4>
+                            <p class="fl con">手动</p>
+                        </li>
+                        <li class="clearfix">
+                            <h4 class="fl">匹配方式：</h4>
+                            <p class="fl con">广泛匹配</p>
+                        </li>
+                        <li class="clearfix give-price">
+                            <h4 class="fl">广告组出价：</h4>
+                            <div class="con fl">
+                                (分时折扣：200%)：
+                                <input type="text" value='$0.02'>
+                                <p>折扣出价：<span>$0.04</span></p>
+                            </div>
+                        </li>
+                        <li class='btn'>
+                            <button>取消</button>
+                            <button>确认</button>
+                        </li>
+                    </ul>
+           </div>
+            <!-- 关键词 -->
+            <div class="keyword">
+                <p>
+                    <i> 关键词：</i>cover up pants for swimwear women
+                    petitewomen black
+                    <span class='tip'>
+                        <span>已开启</span>
+                        <span>广泛匹配</span>
+                    </span>
+                </p>
+                <p>
+                    <a href="./about-search.html">查看搜索词</a>
+                </p>
+            </div>
+        </div>
+        <hr style='margin-top: 0;' />
+        <!-- 搜索按钮 -->
+        <div class="search">
+            <i id='find'></i>
+        </div>
+        <!-- 涉及广告 -->
+        <!-- about ad -->
+        <div class="about-ad">
+            <ul id='tab' class='tab clearfix'>
+                <li class='now'>全部</li>
+                <li>已启动</li>
+                <li>已暂停</li>
+                <li>已归档</li>
+            </ul>
+            <h2>
+                涉及广告
+                <span>(424)</span>
+            </h2>
+            <!-- 涉及的广告列表 -->
+            <ul class="ad-info">
+                <li class='clearfix'>
+                    <img src="../img/shit.png" alt="衣服" class='fl' >                    
+                    <div >
+                        <p>
+                            LasuvierfitmeevierlinseryvierLaSuiveur_Selowin
+                            vierelowinvier
+                        </p>
+                        <p>
+                            ASIN:
+                            <span>FSTP89376</span>
+                        </p>
+                         <p>
+                             SKU:
+                             <span>FSTP89376</span>
+                        </p>
+                    </div>
+                </li>
+                  <li class='clearfix'>
+                    <img src="../img/shit.png" alt="衣服" class='fl' >                    
+                    <div >
+                        <p>
+                            LasuvierfitmeevierlinseryvierLaSuiveur_Selowin
+                            vierelowinvier
+                        </p>
+                        <p>
+                            ASIN:
+                            <span>FSTP89376</span>
+                        </p>
+                         <p>
+                             SKU:
+                             <span>FSTP89376</span>
+                        </p>
+                    </div>
+                </li>
+                  <li class='clearfix'>
+                    <img src="../img/shit.png" alt="衣服" class='fl' >                    
+                    <div >
+                        <p>
+                            LasuvierfitmeevierlinseryvierLaSuiveur_Selowin
+                            vierelowinvier
+                        </p>
+                        <p>
+                            ASIN:
+                            <span>FSTP89376</span>
+                        </p>
+                         <p>
+                             SKU:
+                             <span>FSTP89376</span>
+                        </p>
+                    </div>
+                </li>
+                  <li class='clearfix'>
+                    <img src="../img/shit.png" alt="衣服" class='fl' >                    
+                    <div >
+                        <p>
+                            LasuvierfitmeevierlinseryvierLaSuiveur_Selowin
+                            vierelowinvier
+                        </p>
+                        <p>
+                            ASIN:
+                            <span>FSTP89376</span>
+                        </p>
+                         <p>
+                             SKU:
+                             <span>FSTP89376</span>
+                        </p>
+                    </div>
+                </li>
+                  <li class='clearfix'>
+                    <img src="../img/shit.png" alt="衣服" class='fl' >                    
+                    <div >
+                        <p>
+                            LasuvierfitmeevierlinseryvierLaSuiveur_Selowin
+                            vierelowinvier
+                        </p>
+                        <p>
+                            ASIN:
+                            <span>FSTP89376</span>
+                        </p>
+                         <p>
+                             SKU:
+                             <span>FSTP89376</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 搜索页面 -->
+    <div id="store-search" style='display: none;' >
+            <!-- 搜索栏 -->
+        <div class="search clearfix" id='search'>
+            <i class="fl" id='return'></i> 
+            <input type="text" class='fl' placeholder="请输入店铺名" />
+            <span class="fl">取消</span>
+        </div>
+    </div>
+
+    <!-- 遮罩层2 -->
+    <div id="mask2"></div>
+    <!-- 选择跳往某个页面 -->
+    <nav id="cpc-all-nav">
+        <ul>
+            <li><a href="/index.html">首页</a></li>
+            <li><a href="./ad-active.html">
+            店铺：<span>Lasuvier</span>
+            </a></li>
+            <li><a href="./ad-group.html">
+            广告活动：<span>裤子</span>
+            </a></li>
+            <li><a href="./ad-advert.html">
+            广告组：<span>毛裤</span>
+            </a></li>
+            <li><a href="#">
+                关键词：<span>swimming</span>
+            </a></li>
+        </ul>
+    </nav>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        // 调用common里面的tab方法
+        Common.tab('tab','li','now');
+           // 调用 showOrHide方法，
+           Common.showOrHide('toggleBtn','ad-detail');
+        // 跳转到关键词页面
+          Common.clickLink('about-ad','/view/about-keyword.html');
+          Common.returnPrevPage();
+          Common.storeSearch('find','about-ad','store-search');
+        Common.showWrap('return','about-ad','store-search');
+        Common.changeStatus();
+          
+        Common.sameNavStyle();
+        Common.chooseNav('about-ad');
+    </script>
+</body>
+</html>

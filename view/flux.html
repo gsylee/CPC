@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <!-- 视图窗口，移动端特属的标签。 -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- 这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <!-- 忽略页面中的数字识别为电话号码,email识别 -->
+        <meta name="format-detection"content="telephone=no, email=no" />
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app"> 
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- 下面三个： 禁止浏览器缓存，项目上线的时候，记得删除 -->
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <title>流量诊断</title>
+        <script src="../js/changeSize.js"></script>
+        <link rel="stylesheet" href="../css/swiper.min.css" />
+        <link rel="stylesheet" href="../css/layer.css" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/index.css" /> 
+                    <!-- 时间选择插件 -->
+        <link rel="stylesheet" href="../css/normalize3.0.2.min.css">
+        <link rel="stylesheet" href="../css/mobiscroll.css">
+        <link rel="stylesheet" href="../css/mobiscroll_date.css">
+</head>
+<body>
+    <div id="cpc-flux">
+        <!-- 头部导航 -->
+        <div class="top clearfix">
+            <a href="#" class='fl' id='prevBtn'></a>
+            <nav class="fl">
+                <ul class="clearfix" id='topBar'>
+                    <li>
+                        <a href="#">
+                            <h3>账户诊断</h3>
+                        </a>
+                    </li>
+                    <li >
+                      <a href="#">
+                              
+                          <h3 class="current">流量诊断</h3>
+                      </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 右边三个点 -->
+            <p class="fr" id="chooseNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+           
+        </div>
+        <hr />
+        <!-- 内容区域 -->
+        <div class="con">
+            <!-- 搜索栏 -->
+            <div class="search">
+                <i id="find"></i>
+            </div>
+            <!-- 表格，尝试使用flex布局方式 -->
+            <div id="showData" class="showData">
+                <div class="store-name">
+                    <dl>
+                        <dt>广告组</dt>
+                        <dd>
+                            Gjdkfghkdf
+                            <i class="a"></i>
+                            <i class="m"></i>
+                        </dd>
+                        <dd>
+                            GjdkfghkdfGjdkfghkdf
+                            <i class="f"></i>
+                            <i class="f"></i>
+                        </dd>                        
+                    </dl>
+                </div>
+                <div class="store-info">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>过去同日平均</th>
+                                <th>昨日</th>
+                                <th>涨幅</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0.98</td>
+                                <td>0.98</td>
+                                <td>45.30%</td>
+                            </tr>
+                            <tr>
+                                <td>0.98</td>
+                                <td>0.98</td>
+                                <td>45.30%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 需要的遮罩层 -->
+        <div id="mask2"></div>
+        <!-- 导航栏 -->
+         <nav id="cpc-all-nav">
+             <ul>
+                 <li><a href="/index.html">账户诊断</a></li>
+                 <li><a href="#">
+                     流量诊断
+                 </a></li>
+                 <li><a href="#">
+                        广告组：<span>sjabced</span>
+                 </a></li>
+             </ul>
+         </nav>
+    </div>
+
+        <!-- 搜索页面 -->
+        <div id="store-search" style='display: none;' >
+                <!-- 搜索栏 -->
+            <div class="search clearfix" id='search'>
+                <i class="fl" id='return'></i> 
+                <input type="text" class='fl' placeholder="请输入店铺名" />
+                <span class="fl">取消</span>
+            </div>
+        </div>
+    
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        Common.chooseNav('cpc-flux');
+        // 查询店铺功能
+        Common.storeSearch('find','cpc-flux','store-search');
+        Common.showWrap('return','cpc-flux','store-search');
+        Common.returnPrevPage();
+    </script>
+</body>
+</html>
